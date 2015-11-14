@@ -1,0 +1,29 @@
+Running: /nfs/tools/xilinx/13.2/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/tb_idea_isim_beh.exe -prj /home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/tb_idea_beh.prj work.tb_idea 
+ISim O.61xd (signature 0xb4d1ced7)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/xorop.vhd" into library work
+Parsing VHDL file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/mulop.vhd" into library work
+Parsing VHDL file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/addop.vhd" into library work
+Parsing VHDL file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/trafo.vhd" into library work
+Parsing VHDL file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/round.vhd" into library work
+Parsing VHDL file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/idea.vhd" into library work
+Parsing VHDL file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/tb_idea.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 73344 KB
+Fuse CPU Usage: 110 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture behavioral of entity mulop [mulop_default]
+Compiling architecture behavioral of entity addop [addop_default]
+Compiling architecture behavioral of entity trafo [trafo_default]
+Compiling architecture behavioral of entity xorop [xorop_default]
+Compiling architecture behavioral of entity round [round_default]
+Compiling architecture behavioral of entity idea [idea_default]
+Compiling architecture behavior of entity tb_idea
+Time Resolution for simulation is 1ps.
+Waiting for 6 sub-compilation(s) to finish...
+ERROR:Simulator:861 - Failed to link the design

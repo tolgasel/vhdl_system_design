@@ -1,0 +1,44 @@
+Release 13.2 - xst O.61xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Parameter xsthdpdir set to /home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/mulop.vhd" in Library work.
+Architecture behavioral of Entity mulop is up to date.
+Compiling vhdl file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/addop.vhd" in Library work.
+Architecture behavioral of Entity addop is up to date.
+Compiling vhdl file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/xorop.vhd" in Library work.
+Architecture behavioral of Entity xorop is up to date.
+Compiling vhdl file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/round.vhd" in Library work.
+Architecture behavioral of Entity round is up to date.
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> 
+
+
+Total memory usage is 315164 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

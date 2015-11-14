@@ -1,0 +1,262 @@
+Release 13.2 - xst O.61xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Reading design: idea.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "idea.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "idea"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : idea
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/mulop.vhd" in Library work.
+Architecture behavioral of Entity mulop is up to date.
+Compiling vhdl file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/addop.vhd" in Library work.
+Architecture behavioral of Entity addop is up to date.
+Compiling vhdl file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/xorop.vhd" in Library work.
+Architecture behavioral of Entity xorop is up to date.
+Compiling vhdl file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/trafo.vhd" in Library work.
+Architecture behavioral of Entity trafo is up to date.
+Compiling vhdl file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/round.vhd" in Library work.
+Architecture behavioral of Entity round is up to date.
+Compiling vhdl file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/idea.vhd" in Library work.
+Architecture behavioral of Entity idea is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <idea> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <trafo> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <round> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mulop> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <addop> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <xorop> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <idea> in library <work> (Architecture <behavioral>).
+Entity <idea> analyzed. Unit <idea> generated.
+
+Analyzing Entity <trafo> in library <work> (Architecture <behavioral>).
+Entity <trafo> analyzed. Unit <trafo> generated.
+
+Analyzing Entity <mulop> in library <work> (Architecture <behavioral>).
+Entity <mulop> analyzed. Unit <mulop> generated.
+
+Analyzing Entity <addop> in library <work> (Architecture <behavioral>).
+Entity <addop> analyzed. Unit <addop> generated.
+
+Analyzing Entity <round> in library <work> (Architecture <behavioral>).
+Entity <round> analyzed. Unit <round> generated.
+
+Analyzing Entity <xorop> in library <work> (Architecture <behavioral>).
+Entity <xorop> analyzed. Unit <xorop> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <mulop>.
+    Related source file is "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/mulop.vhd".
+    Found 17x17-bit multiplier for signal <c$mult0000> created at line 62.
+    Found 33-bit subtractor for signal <f$addsub0000> created at line 71.
+    Found 33-bit comparator greatequal for signal <f$cmp_ge0000> created at line 70.
+    Found 33-bit addsub for signal <f$mux0000> created at line 70.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+	inferred   1 Comparator(s).
+Unit <mulop> synthesized.
+
+
+Synthesizing Unit <addop>.
+    Related source file is "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/addop.vhd".
+    Found 16-bit adder for signal <O>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <addop> synthesized.
+
+
+Synthesizing Unit <xorop>.
+    Related source file is "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/xorop.vhd".
+    Found 16-bit xor2 for signal <O>.
+Unit <xorop> synthesized.
+
+
+Synthesizing Unit <trafo>.
+    Related source file is "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/trafo.vhd".
+Unit <trafo> synthesized.
+
+
+Synthesizing Unit <round>.
+    Related source file is "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/round.vhd".
+WARNING:Xst:1780 - Signal <sm2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sm1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sa2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sa1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <round> synthesized.
+
+
+Synthesizing Unit <idea>.
+    Related source file is "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/idea.vhd".
+WARNING:Xst:646 - Signal <skeyshift7<63:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <idea> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 34
+ 17x17-bit multiplier                                  : 34
+# Adders/Subtractors                                   : 102
+ 16-bit adder                                          : 34
+ 33-bit addsub                                         : 34
+ 33-bit subtractor                                     : 34
+# Comparators                                          : 34
+ 33-bit comparator greatequal                          : 34
+# Xors                                                 : 48
+ 16-bit xor2                                           : 48
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 34
+ 17x17-bit multiplier                                  : 34
+# Adders/Subtractors                                   : 102
+ 16-bit adder                                          : 34
+ 33-bit addsub                                         : 34
+ 33-bit subtractor                                     : 34
+# Comparators                                          : 34
+ 33-bit comparator greatequal                          : 34
+# Xors                                                 : 48
+ 16-bit xor2                                           : 48
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <idea> ...
+
+Optimizing unit <mulop> ...
+
+Optimizing unit <round> ...

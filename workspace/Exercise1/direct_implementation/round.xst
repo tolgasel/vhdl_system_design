@@ -1,0 +1,5 @@
+set -tmpdir "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation/xst/projnav.tmp"
+set -xsthdpdir "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation/xst"
+elaborate
+-ifn round.prj
+-ifmt mixed

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation/tb_idea_isim_beh.exe" -prj "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation/tb_idea_beh.prj" "work.tb_idea" 

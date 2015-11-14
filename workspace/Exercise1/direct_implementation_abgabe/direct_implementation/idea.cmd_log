@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/idea.xst" -ofn "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/idea.syr" 
+xst -intstyle ise -ifn "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/idea.xst" -ofn "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/idea.syr" 

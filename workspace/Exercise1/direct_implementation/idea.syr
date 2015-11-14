@@ -1,0 +1,1467 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> 
+Reading design: idea.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "idea.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "idea"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : idea
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation/mulop.vhd" in Library work.
+Entity <mulop> compiled.
+Entity <mulop> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation/addop.vhd" in Library work.
+Architecture behavioral of Entity addop is up to date.
+Compiling vhdl file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation/xorop.vhd" in Library work.
+Architecture behavioral of Entity xorop is up to date.
+Compiling vhdl file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation/trafo.vhd" in Library work.
+Entity <trafo> compiled.
+Entity <trafo> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation/round.vhd" in Library work.
+Entity <round> compiled.
+Entity <round> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation/idea.vhd" in Library work.
+Entity <idea> compiled.
+Entity <idea> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <idea> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <trafo> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <round> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mulop> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <addop> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <xorop> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <idea> in library <work> (Architecture <behavioral>).
+Entity <idea> analyzed. Unit <idea> generated.
+
+Analyzing Entity <trafo> in library <work> (Architecture <behavioral>).
+Entity <trafo> analyzed. Unit <trafo> generated.
+
+Analyzing Entity <mulop> in library <work> (Architecture <behavioral>).
+Entity <mulop> analyzed. Unit <mulop> generated.
+
+Analyzing Entity <addop> in library <work> (Architecture <behavioral>).
+Entity <addop> analyzed. Unit <addop> generated.
+
+Analyzing Entity <round> in library <work> (Architecture <behavioral>).
+Entity <round> analyzed. Unit <round> generated.
+
+Analyzing Entity <xorop> in library <work> (Architecture <behavioral>).
+Entity <xorop> analyzed. Unit <xorop> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <mulop>.
+    Related source file is "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation/mulop.vhd".
+    Found 17x17-bit multiplier for signal <c$mult0000> created at line 62.
+    Found 33-bit subtractor for signal <f$addsub0000> created at line 71.
+    Found 33-bit comparator greatequal for signal <f$cmp_ge0000> created at line 70.
+    Found 33-bit addsub for signal <f$mux0000> created at line 70.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+	inferred   1 Comparator(s).
+Unit <mulop> synthesized.
+
+
+Synthesizing Unit <addop>.
+    Related source file is "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation/addop.vhd".
+    Found 16-bit adder for signal <O>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <addop> synthesized.
+
+
+Synthesizing Unit <xorop>.
+    Related source file is "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation/xorop.vhd".
+    Found 16-bit xor2 for signal <O>.
+Unit <xorop> synthesized.
+
+
+Synthesizing Unit <trafo>.
+    Related source file is "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation/trafo.vhd".
+Unit <trafo> synthesized.
+
+
+Synthesizing Unit <round>.
+    Related source file is "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation/round.vhd".
+WARNING:Xst:1780 - Signal <sm2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sm1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sa2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <sa1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <round> synthesized.
+
+
+Synthesizing Unit <idea>.
+    Related source file is "/home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation/idea.vhd".
+WARNING:Xst:646 - Signal <skeyshift7<63:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <idea> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 34
+ 17x17-bit multiplier                                  : 34
+# Adders/Subtractors                                   : 102
+ 16-bit adder                                          : 34
+ 33-bit addsub                                         : 34
+ 33-bit subtractor                                     : 34
+# Comparators                                          : 34
+ 33-bit comparator greatequal                          : 34
+# Xors                                                 : 48
+ 16-bit xor2                                           : 48
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 34
+ 17x17-bit multiplier                                  : 34
+# Adders/Subtractors                                   : 102
+ 16-bit adder                                          : 34
+ 33-bit addsub                                         : 34
+ 33-bit subtractor                                     : 34
+# Comparators                                          : 34
+ 33-bit comparator greatequal                          : 34
+# Xors                                                 : 48
+ 16-bit xor2                                           : 48
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <idea> ...
+
+Optimizing unit <mulop> ...
+
+Optimizing unit <round> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block idea, actual ratio is 185.
+Optimizing block <idea> to meet ratio 100 (+ 5) of 4656 slices :
+WARNING:Xst:2254 - Area constraint could not be met for block <idea>, final ratio is 160.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : idea.ngr
+Top Level Output File Name         : idea
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 256
+
+Cell Usage :
+# BELS                             : 43553
+#      GND                         : 1
+#      INV                         : 34
+#      LUT1                        : 476
+#      LUT2                        : 7226
+#      LUT3                        : 2178
+#      LUT4                        : 4559
+#      MULT_AND                    : 3740
+#      MUXCY                       : 12818
+#      MUXF5                       : 8
+#      VCC                         : 1
+#      XORCY                       : 12512
+# IO Buffers                       : 256
+#      IBUF                        : 192
+#      OBUF                        : 64
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                     7487  out of   4656   160% (*) 
+ Number of 4 input LUTs:              14473  out of   9312   155% (*) 
+ Number of IOs:                         256
+ Number of bonded IOBs:                 256  out of    232   110% (*) 
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 665.650ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 34581945250487450757044822759580348074805003846118922076665083138140544275898895344410296264369826259690036864321968065325415995628363741242496747037387176520694841448053803040533461505746047347429814547801180360170322915741401088 / 64
+-------------------------------------------------------------------------
+Delay:               665.650ns (Levels of Logic = 1064)
+  Source:            X1<0> (PAD)
+  Destination:       Y4<15> (PAD)
+
+  Data Path: X1<0> to Y4<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            20   1.218   1.277  X1_0_IBUF (X1_0_IBUF)
+     LUT4:I0->O            1   0.704   0.595  round_1/mulop_1/a_cmp_eq000012 (round_1/mulop_1/a_cmp_eq000012)
+     LUT4:I0->O           17   0.704   1.051  round_1/mulop_1/a_cmp_eq000076 (round_1/mulop_1/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_1/mulop_1/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_1/mulop_1/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_1/mulop_1/Mmult_c_mult0000_Madd2_cy<7> (round_1/mulop_1/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_1/mulop_1/Mmult_c_mult0000_Madd2_xor<8> (round_1/mulop_1/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_1/mulop_1/Mmult_c_mult0000_Madd8_lut<10> (round_1/mulop_1/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_1/mulop_1/Mmult_c_mult0000_Madd8_cy<10> (round_1/mulop_1/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_1/Mmult_c_mult0000_Madd8_cy<11> (round_1/mulop_1/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_1/Mmult_c_mult0000_Madd8_cy<12> (round_1/mulop_1/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_1/mulop_1/Mmult_c_mult0000_Madd8_xor<13> (round_1/mulop_1/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_1/mulop_1/Mmult_c_mult0000_Madd12_lut<17> (round_1/mulop_1/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_1/mulop_1/Mmult_c_mult0000_Madd12_cy<17> (round_1/mulop_1/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_1/Mmult_c_mult0000_Madd12_cy<18> (round_1/mulop_1/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_1/Mmult_c_mult0000_Madd12_cy<19> (round_1/mulop_1/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_1/Mmult_c_mult0000_Madd12_cy<20> (round_1/mulop_1/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_1/Mmult_c_mult0000_Madd12_cy<21> (round_1/mulop_1/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_1/mulop_1/Mmult_c_mult0000_Madd12_xor<22> (round_1/mulop_1/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_1/mulop_1/Mmult_c_mult0000_Madd14_lut<27> (round_1/mulop_1/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_1/mulop_1/Mmult_c_mult0000_Madd14_cy<27> (round_1/mulop_1/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_1/Mmult_c_mult0000_Madd14_cy<28> (round_1/mulop_1/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_1/Mmult_c_mult0000_Madd14_cy<29> (round_1/mulop_1/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_1/mulop_1/Mmult_c_mult0000_Madd14_xor<30> (round_1/mulop_1/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_1/mulop_1/Mmult_c_mult0000_Madd15_lut<30> (round_1/mulop_1/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_1/mulop_1/Mmult_c_mult0000_Madd15_cy<30> (round_1/mulop_1/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_1/mulop_1/Mmult_c_mult0000_Madd15_xor<31> (round_1/mulop_1/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_1/mulop_1/Mcompar_f_cmp_ge0000_lut<15> (round_1/mulop_1/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_1/mulop_1/Mcompar_f_cmp_ge0000_cy<15> (round_1/mulop_1/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_1/mulop_1/Mcompar_f_cmp_ge0000_cy<16> (round_1/mulop_1/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_1/mulop_1/f_mux0001<0>1 (round_1/mulop_1/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_1/mulop_1/Maddsub_f_mux0000_lut<0> (round_1/mulop_1/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_1/mulop_1/Maddsub_f_mux0000_cy<0> (round_1/mulop_1/Maddsub_f_mux0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_1/Maddsub_f_mux0000_cy<1> (round_1/mulop_1/Maddsub_f_mux0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_1/Maddsub_f_mux0000_cy<2> (round_1/mulop_1/Maddsub_f_mux0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_1/Maddsub_f_mux0000_cy<3> (round_1/mulop_1/Maddsub_f_mux0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_1/Maddsub_f_mux0000_cy<4> (round_1/mulop_1/Maddsub_f_mux0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_1/Maddsub_f_mux0000_cy<5> (round_1/mulop_1/Maddsub_f_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_1/Maddsub_f_mux0000_cy<6> (round_1/mulop_1/Maddsub_f_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_1/Maddsub_f_mux0000_cy<7> (round_1/mulop_1/Maddsub_f_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_1/Maddsub_f_mux0000_cy<8> (round_1/mulop_1/Maddsub_f_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_1/Maddsub_f_mux0000_cy<9> (round_1/mulop_1/Maddsub_f_mux0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_1/Maddsub_f_mux0000_cy<10> (round_1/mulop_1/Maddsub_f_mux0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_1/Maddsub_f_mux0000_cy<11> (round_1/mulop_1/Maddsub_f_mux0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_1/Maddsub_f_mux0000_cy<12> (round_1/mulop_1/Maddsub_f_mux0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_1/Maddsub_f_mux0000_cy<13> (round_1/mulop_1/Maddsub_f_mux0000_cy<13>)
+     XORCY:CI->O           2   0.804   0.526  round_1/mulop_1/Maddsub_f_mux0000_xor<14> (round_1/x1z1<14>)
+     LUT2:I1->O           18   0.704   1.243  round_1/xorop_1/Mxor_O_Result<14>1 (round_1/sx1<14>)
+     LUT4:I0->O            1   0.704   0.499  round_1/mulop_3/a_cmp_eq000086_SW0 (N26)
+     LUT4:I1->O           17   0.704   1.051  round_1/mulop_3/a_cmp_eq000086 (round_1/mulop_3/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_1/mulop_3/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_1/mulop_3/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_1/mulop_3/Mmult_c_mult0000_Madd2_cy<7> (round_1/mulop_3/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_1/mulop_3/Mmult_c_mult0000_Madd2_xor<8> (round_1/mulop_3/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_1/mulop_3/Mmult_c_mult0000_Madd8_lut<10> (round_1/mulop_3/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_1/mulop_3/Mmult_c_mult0000_Madd8_cy<10> (round_1/mulop_3/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_3/Mmult_c_mult0000_Madd8_cy<11> (round_1/mulop_3/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_3/Mmult_c_mult0000_Madd8_cy<12> (round_1/mulop_3/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_1/mulop_3/Mmult_c_mult0000_Madd8_xor<13> (round_1/mulop_3/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_1/mulop_3/Mmult_c_mult0000_Madd12_lut<17> (round_1/mulop_3/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_1/mulop_3/Mmult_c_mult0000_Madd12_cy<17> (round_1/mulop_3/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_3/Mmult_c_mult0000_Madd12_cy<18> (round_1/mulop_3/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_3/Mmult_c_mult0000_Madd12_cy<19> (round_1/mulop_3/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_3/Mmult_c_mult0000_Madd12_cy<20> (round_1/mulop_3/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_3/Mmult_c_mult0000_Madd12_cy<21> (round_1/mulop_3/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_1/mulop_3/Mmult_c_mult0000_Madd12_xor<22> (round_1/mulop_3/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_1/mulop_3/Mmult_c_mult0000_Madd14_lut<27> (round_1/mulop_3/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_1/mulop_3/Mmult_c_mult0000_Madd14_cy<27> (round_1/mulop_3/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_3/Mmult_c_mult0000_Madd14_cy<28> (round_1/mulop_3/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_3/Mmult_c_mult0000_Madd14_cy<29> (round_1/mulop_3/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_1/mulop_3/Mmult_c_mult0000_Madd14_xor<30> (round_1/mulop_3/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_1/mulop_3/Mmult_c_mult0000_Madd15_lut<30> (round_1/mulop_3/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_1/mulop_3/Mmult_c_mult0000_Madd15_cy<30> (round_1/mulop_3/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_1/mulop_3/Mmult_c_mult0000_Madd15_xor<31> (round_1/mulop_3/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_1/mulop_3/Mcompar_f_cmp_ge0000_lut<15> (round_1/mulop_3/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_1/mulop_3/Mcompar_f_cmp_ge0000_cy<15> (round_1/mulop_3/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_1/mulop_3/Mcompar_f_cmp_ge0000_cy<16> (round_1/mulop_3/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_1/mulop_3/f_mux0001<0>1 (round_1/mulop_3/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_1/mulop_3/Maddsub_f_mux0000_lut<0> (round_1/mulop_3/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_1/mulop_3/Maddsub_f_mux0000_cy<0> (round_1/mulop_3/Maddsub_f_mux0000_cy<0>)
+     XORCY:CI->O           2   0.804   0.482  round_1/mulop_3/Maddsub_f_mux0000_xor<1> (round_1/sm3<1>)
+     LUT3:I2->O            1   0.704   0.000  round_1/addop_3/Madd_O_lut<1> (round_1/addop_3/Madd_O_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  round_1/addop_3/Madd_O_cy<1> (round_1/addop_3/Madd_O_cy<1>)
+     XORCY:CI->O          18   0.804   1.103  round_1/addop_3/Madd_O_xor<2> (round_1/sa3<2>)
+     LUT3:I2->O            1   0.704   0.595  round_1/mulop_4/a_cmp_eq00008 (round_1/mulop_4/a_cmp_eq00008)
+     LUT4:I0->O            1   0.704   0.455  round_1/mulop_4/a_cmp_eq000024 (round_1/mulop_4/a_cmp_eq000024)
+     LUT4:I2->O           17   0.704   1.051  round_1/mulop_4/a_cmp_eq000088 (round_1/mulop_4/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_1/mulop_4/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_1/mulop_4/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_1/mulop_4/Mmult_c_mult0000_Madd2_cy<7> (round_1/mulop_4/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_1/mulop_4/Mmult_c_mult0000_Madd2_xor<8> (round_1/mulop_4/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_1/mulop_4/Mmult_c_mult0000_Madd8_lut<10> (round_1/mulop_4/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_1/mulop_4/Mmult_c_mult0000_Madd8_cy<10> (round_1/mulop_4/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_4/Mmult_c_mult0000_Madd8_cy<11> (round_1/mulop_4/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_4/Mmult_c_mult0000_Madd8_cy<12> (round_1/mulop_4/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_1/mulop_4/Mmult_c_mult0000_Madd8_xor<13> (round_1/mulop_4/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_1/mulop_4/Mmult_c_mult0000_Madd12_lut<17> (round_1/mulop_4/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_1/mulop_4/Mmult_c_mult0000_Madd12_cy<17> (round_1/mulop_4/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_4/Mmult_c_mult0000_Madd12_cy<18> (round_1/mulop_4/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_4/Mmult_c_mult0000_Madd12_cy<19> (round_1/mulop_4/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_4/Mmult_c_mult0000_Madd12_cy<20> (round_1/mulop_4/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_4/Mmult_c_mult0000_Madd12_cy<21> (round_1/mulop_4/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_1/mulop_4/Mmult_c_mult0000_Madd12_xor<22> (round_1/mulop_4/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_1/mulop_4/Mmult_c_mult0000_Madd14_lut<27> (round_1/mulop_4/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_1/mulop_4/Mmult_c_mult0000_Madd14_cy<27> (round_1/mulop_4/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_4/Mmult_c_mult0000_Madd14_cy<28> (round_1/mulop_4/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_4/Mmult_c_mult0000_Madd14_cy<29> (round_1/mulop_4/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_1/mulop_4/Mmult_c_mult0000_Madd14_xor<30> (round_1/mulop_4/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_1/mulop_4/Mmult_c_mult0000_Madd15_lut<30> (round_1/mulop_4/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_1/mulop_4/Mmult_c_mult0000_Madd15_cy<30> (round_1/mulop_4/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_1/mulop_4/Mmult_c_mult0000_Madd15_xor<31> (round_1/mulop_4/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_1/mulop_4/Mcompar_f_cmp_ge0000_lut<15> (round_1/mulop_4/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_1/mulop_4/Mcompar_f_cmp_ge0000_cy<15> (round_1/mulop_4/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_1/mulop_4/Mcompar_f_cmp_ge0000_cy<16> (round_1/mulop_4/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_1/mulop_4/f_mux0001<0>1 (round_1/mulop_4/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_1/mulop_4/Maddsub_f_mux0000_lut<0> (round_1/mulop_4/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_1/mulop_4/Maddsub_f_mux0000_cy<0> (round_1/mulop_4/Maddsub_f_mux0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_4/Maddsub_f_mux0000_cy<1> (round_1/mulop_4/Maddsub_f_mux0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_4/Maddsub_f_mux0000_cy<2> (round_1/mulop_4/Maddsub_f_mux0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_4/Maddsub_f_mux0000_cy<3> (round_1/mulop_4/Maddsub_f_mux0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_4/Maddsub_f_mux0000_cy<4> (round_1/mulop_4/Maddsub_f_mux0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_4/Maddsub_f_mux0000_cy<5> (round_1/mulop_4/Maddsub_f_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_4/Maddsub_f_mux0000_cy<6> (round_1/mulop_4/Maddsub_f_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_4/Maddsub_f_mux0000_cy<7> (round_1/mulop_4/Maddsub_f_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_4/Maddsub_f_mux0000_cy<8> (round_1/mulop_4/Maddsub_f_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_4/Maddsub_f_mux0000_cy<9> (round_1/mulop_4/Maddsub_f_mux0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_4/Maddsub_f_mux0000_cy<10> (round_1/mulop_4/Maddsub_f_mux0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_4/Maddsub_f_mux0000_cy<11> (round_1/mulop_4/Maddsub_f_mux0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_4/Maddsub_f_mux0000_cy<12> (round_1/mulop_4/Maddsub_f_mux0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  round_1/mulop_4/Maddsub_f_mux0000_cy<13> (round_1/mulop_4/Maddsub_f_mux0000_cy<13>)
+     XORCY:CI->O           4   0.804   0.762  round_1/mulop_4/Maddsub_f_mux0000_xor<14> (round_1/sm4<14>)
+     LUT2:I0->O           18   0.704   1.243  round_1/xorop_3/Mxor_O_Result<14>1 (sr1y1<14>)
+     LUT4:I0->O            1   0.704   0.499  round_2/mulop_1/a_cmp_eq000086_SW0 (N44)
+     LUT4:I1->O           17   0.704   1.051  round_2/mulop_1/a_cmp_eq000086 (round_2/mulop_1/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_2/mulop_1/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_2/mulop_1/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_2/mulop_1/Mmult_c_mult0000_Madd2_cy<7> (round_2/mulop_1/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_2/mulop_1/Mmult_c_mult0000_Madd2_xor<8> (round_2/mulop_1/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_2/mulop_1/Mmult_c_mult0000_Madd8_lut<10> (round_2/mulop_1/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_2/mulop_1/Mmult_c_mult0000_Madd8_cy<10> (round_2/mulop_1/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_1/Mmult_c_mult0000_Madd8_cy<11> (round_2/mulop_1/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_1/Mmult_c_mult0000_Madd8_cy<12> (round_2/mulop_1/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_2/mulop_1/Mmult_c_mult0000_Madd8_xor<13> (round_2/mulop_1/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_2/mulop_1/Mmult_c_mult0000_Madd12_lut<17> (round_2/mulop_1/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_2/mulop_1/Mmult_c_mult0000_Madd12_cy<17> (round_2/mulop_1/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_1/Mmult_c_mult0000_Madd12_cy<18> (round_2/mulop_1/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_1/Mmult_c_mult0000_Madd12_cy<19> (round_2/mulop_1/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_1/Mmult_c_mult0000_Madd12_cy<20> (round_2/mulop_1/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_1/Mmult_c_mult0000_Madd12_cy<21> (round_2/mulop_1/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_2/mulop_1/Mmult_c_mult0000_Madd12_xor<22> (round_2/mulop_1/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_2/mulop_1/Mmult_c_mult0000_Madd14_lut<27> (round_2/mulop_1/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_2/mulop_1/Mmult_c_mult0000_Madd14_cy<27> (round_2/mulop_1/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_1/Mmult_c_mult0000_Madd14_cy<28> (round_2/mulop_1/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_1/Mmult_c_mult0000_Madd14_cy<29> (round_2/mulop_1/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_2/mulop_1/Mmult_c_mult0000_Madd14_xor<30> (round_2/mulop_1/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_2/mulop_1/Mmult_c_mult0000_Madd15_lut<30> (round_2/mulop_1/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_2/mulop_1/Mmult_c_mult0000_Madd15_cy<30> (round_2/mulop_1/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_2/mulop_1/Mmult_c_mult0000_Madd15_xor<31> (round_2/mulop_1/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_2/mulop_1/Mcompar_f_cmp_ge0000_lut<15> (round_2/mulop_1/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_2/mulop_1/Mcompar_f_cmp_ge0000_cy<15> (round_2/mulop_1/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_2/mulop_1/Mcompar_f_cmp_ge0000_cy<16> (round_2/mulop_1/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_2/mulop_1/f_mux0001<0>1 (round_2/mulop_1/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_2/mulop_1/Maddsub_f_mux0000_lut<0> (round_2/mulop_1/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_2/mulop_1/Maddsub_f_mux0000_cy<0> (round_2/mulop_1/Maddsub_f_mux0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_1/Maddsub_f_mux0000_cy<1> (round_2/mulop_1/Maddsub_f_mux0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_1/Maddsub_f_mux0000_cy<2> (round_2/mulop_1/Maddsub_f_mux0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_1/Maddsub_f_mux0000_cy<3> (round_2/mulop_1/Maddsub_f_mux0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_1/Maddsub_f_mux0000_cy<4> (round_2/mulop_1/Maddsub_f_mux0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_1/Maddsub_f_mux0000_cy<5> (round_2/mulop_1/Maddsub_f_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_1/Maddsub_f_mux0000_cy<6> (round_2/mulop_1/Maddsub_f_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_1/Maddsub_f_mux0000_cy<7> (round_2/mulop_1/Maddsub_f_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_1/Maddsub_f_mux0000_cy<8> (round_2/mulop_1/Maddsub_f_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_1/Maddsub_f_mux0000_cy<9> (round_2/mulop_1/Maddsub_f_mux0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_1/Maddsub_f_mux0000_cy<10> (round_2/mulop_1/Maddsub_f_mux0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_1/Maddsub_f_mux0000_cy<11> (round_2/mulop_1/Maddsub_f_mux0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_1/Maddsub_f_mux0000_cy<12> (round_2/mulop_1/Maddsub_f_mux0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_1/Maddsub_f_mux0000_cy<13> (round_2/mulop_1/Maddsub_f_mux0000_cy<13>)
+     XORCY:CI->O           2   0.804   0.526  round_2/mulop_1/Maddsub_f_mux0000_xor<14> (round_2/x1z1<14>)
+     LUT2:I1->O           18   0.704   1.243  round_2/xorop_1/Mxor_O_Result<14>1 (round_2/sx1<14>)
+     LUT4:I0->O            1   0.704   0.499  round_2/mulop_3/a_cmp_eq000086_SW0 (N42)
+     LUT4:I1->O           17   0.704   1.051  round_2/mulop_3/a_cmp_eq000086 (round_2/mulop_3/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_2/mulop_3/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_2/mulop_3/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_2/mulop_3/Mmult_c_mult0000_Madd2_cy<7> (round_2/mulop_3/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_2/mulop_3/Mmult_c_mult0000_Madd2_xor<8> (round_2/mulop_3/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_2/mulop_3/Mmult_c_mult0000_Madd8_lut<10> (round_2/mulop_3/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_2/mulop_3/Mmult_c_mult0000_Madd8_cy<10> (round_2/mulop_3/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_3/Mmult_c_mult0000_Madd8_cy<11> (round_2/mulop_3/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_3/Mmult_c_mult0000_Madd8_cy<12> (round_2/mulop_3/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_2/mulop_3/Mmult_c_mult0000_Madd8_xor<13> (round_2/mulop_3/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_2/mulop_3/Mmult_c_mult0000_Madd12_lut<17> (round_2/mulop_3/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_2/mulop_3/Mmult_c_mult0000_Madd12_cy<17> (round_2/mulop_3/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_3/Mmult_c_mult0000_Madd12_cy<18> (round_2/mulop_3/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_3/Mmult_c_mult0000_Madd12_cy<19> (round_2/mulop_3/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_3/Mmult_c_mult0000_Madd12_cy<20> (round_2/mulop_3/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_3/Mmult_c_mult0000_Madd12_cy<21> (round_2/mulop_3/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_2/mulop_3/Mmult_c_mult0000_Madd12_xor<22> (round_2/mulop_3/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_2/mulop_3/Mmult_c_mult0000_Madd14_lut<27> (round_2/mulop_3/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_2/mulop_3/Mmult_c_mult0000_Madd14_cy<27> (round_2/mulop_3/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_3/Mmult_c_mult0000_Madd14_cy<28> (round_2/mulop_3/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_3/Mmult_c_mult0000_Madd14_cy<29> (round_2/mulop_3/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_2/mulop_3/Mmult_c_mult0000_Madd14_xor<30> (round_2/mulop_3/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_2/mulop_3/Mmult_c_mult0000_Madd15_lut<30> (round_2/mulop_3/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_2/mulop_3/Mmult_c_mult0000_Madd15_cy<30> (round_2/mulop_3/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_2/mulop_3/Mmult_c_mult0000_Madd15_xor<31> (round_2/mulop_3/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_2/mulop_3/Mcompar_f_cmp_ge0000_lut<15> (round_2/mulop_3/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_2/mulop_3/Mcompar_f_cmp_ge0000_cy<15> (round_2/mulop_3/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_2/mulop_3/Mcompar_f_cmp_ge0000_cy<16> (round_2/mulop_3/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_2/mulop_3/f_mux0001<0>1 (round_2/mulop_3/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_2/mulop_3/Maddsub_f_mux0000_lut<0> (round_2/mulop_3/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_2/mulop_3/Maddsub_f_mux0000_cy<0> (round_2/mulop_3/Maddsub_f_mux0000_cy<0>)
+     XORCY:CI->O           2   0.804   0.482  round_2/mulop_3/Maddsub_f_mux0000_xor<1> (round_2/sm3<1>)
+     LUT3:I2->O            1   0.704   0.000  round_2/addop_3/Madd_O_lut<1> (round_2/addop_3/Madd_O_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  round_2/addop_3/Madd_O_cy<1> (round_2/addop_3/Madd_O_cy<1>)
+     XORCY:CI->O          18   0.804   1.103  round_2/addop_3/Madd_O_xor<2> (round_2/sa3<2>)
+     LUT3:I2->O            1   0.704   0.595  round_2/mulop_4/a_cmp_eq00008 (round_2/mulop_4/a_cmp_eq00008)
+     LUT4:I0->O            1   0.704   0.455  round_2/mulop_4/a_cmp_eq000024 (round_2/mulop_4/a_cmp_eq000024)
+     LUT4:I2->O           17   0.704   1.051  round_2/mulop_4/a_cmp_eq000088 (round_2/mulop_4/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_2/mulop_4/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_2/mulop_4/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_2/mulop_4/Mmult_c_mult0000_Madd2_cy<7> (round_2/mulop_4/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_2/mulop_4/Mmult_c_mult0000_Madd2_xor<8> (round_2/mulop_4/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_2/mulop_4/Mmult_c_mult0000_Madd8_lut<10> (round_2/mulop_4/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_2/mulop_4/Mmult_c_mult0000_Madd8_cy<10> (round_2/mulop_4/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_4/Mmult_c_mult0000_Madd8_cy<11> (round_2/mulop_4/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_4/Mmult_c_mult0000_Madd8_cy<12> (round_2/mulop_4/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_2/mulop_4/Mmult_c_mult0000_Madd8_xor<13> (round_2/mulop_4/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_2/mulop_4/Mmult_c_mult0000_Madd12_lut<17> (round_2/mulop_4/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_2/mulop_4/Mmult_c_mult0000_Madd12_cy<17> (round_2/mulop_4/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_4/Mmult_c_mult0000_Madd12_cy<18> (round_2/mulop_4/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_4/Mmult_c_mult0000_Madd12_cy<19> (round_2/mulop_4/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_4/Mmult_c_mult0000_Madd12_cy<20> (round_2/mulop_4/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_4/Mmult_c_mult0000_Madd12_cy<21> (round_2/mulop_4/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_2/mulop_4/Mmult_c_mult0000_Madd12_xor<22> (round_2/mulop_4/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_2/mulop_4/Mmult_c_mult0000_Madd14_lut<27> (round_2/mulop_4/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_2/mulop_4/Mmult_c_mult0000_Madd14_cy<27> (round_2/mulop_4/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_4/Mmult_c_mult0000_Madd14_cy<28> (round_2/mulop_4/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_4/Mmult_c_mult0000_Madd14_cy<29> (round_2/mulop_4/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_2/mulop_4/Mmult_c_mult0000_Madd14_xor<30> (round_2/mulop_4/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_2/mulop_4/Mmult_c_mult0000_Madd15_lut<30> (round_2/mulop_4/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_2/mulop_4/Mmult_c_mult0000_Madd15_cy<30> (round_2/mulop_4/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_2/mulop_4/Mmult_c_mult0000_Madd15_xor<31> (round_2/mulop_4/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_2/mulop_4/Mcompar_f_cmp_ge0000_lut<15> (round_2/mulop_4/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_2/mulop_4/Mcompar_f_cmp_ge0000_cy<15> (round_2/mulop_4/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_2/mulop_4/Mcompar_f_cmp_ge0000_cy<16> (round_2/mulop_4/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_2/mulop_4/f_mux0001<0>1 (round_2/mulop_4/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_2/mulop_4/Maddsub_f_mux0000_lut<0> (round_2/mulop_4/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_2/mulop_4/Maddsub_f_mux0000_cy<0> (round_2/mulop_4/Maddsub_f_mux0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_4/Maddsub_f_mux0000_cy<1> (round_2/mulop_4/Maddsub_f_mux0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_4/Maddsub_f_mux0000_cy<2> (round_2/mulop_4/Maddsub_f_mux0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_4/Maddsub_f_mux0000_cy<3> (round_2/mulop_4/Maddsub_f_mux0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_4/Maddsub_f_mux0000_cy<4> (round_2/mulop_4/Maddsub_f_mux0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_4/Maddsub_f_mux0000_cy<5> (round_2/mulop_4/Maddsub_f_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_4/Maddsub_f_mux0000_cy<6> (round_2/mulop_4/Maddsub_f_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_4/Maddsub_f_mux0000_cy<7> (round_2/mulop_4/Maddsub_f_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_4/Maddsub_f_mux0000_cy<8> (round_2/mulop_4/Maddsub_f_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_4/Maddsub_f_mux0000_cy<9> (round_2/mulop_4/Maddsub_f_mux0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_4/Maddsub_f_mux0000_cy<10> (round_2/mulop_4/Maddsub_f_mux0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_4/Maddsub_f_mux0000_cy<11> (round_2/mulop_4/Maddsub_f_mux0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_4/Maddsub_f_mux0000_cy<12> (round_2/mulop_4/Maddsub_f_mux0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  round_2/mulop_4/Maddsub_f_mux0000_cy<13> (round_2/mulop_4/Maddsub_f_mux0000_cy<13>)
+     XORCY:CI->O           4   0.804   0.762  round_2/mulop_4/Maddsub_f_mux0000_xor<14> (round_2/sm4<14>)
+     LUT2:I0->O           18   0.704   1.243  round_2/xorop_3/Mxor_O_Result<14>1 (sr2y1<14>)
+     LUT4:I0->O            1   0.704   0.499  round_3/mulop_1/a_cmp_eq000086_SW0 (N38)
+     LUT4:I1->O           17   0.704   1.051  round_3/mulop_1/a_cmp_eq000086 (round_3/mulop_1/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_3/mulop_1/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_3/mulop_1/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_3/mulop_1/Mmult_c_mult0000_Madd2_cy<7> (round_3/mulop_1/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_3/mulop_1/Mmult_c_mult0000_Madd2_xor<8> (round_3/mulop_1/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_3/mulop_1/Mmult_c_mult0000_Madd8_lut<10> (round_3/mulop_1/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_3/mulop_1/Mmult_c_mult0000_Madd8_cy<10> (round_3/mulop_1/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_1/Mmult_c_mult0000_Madd8_cy<11> (round_3/mulop_1/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_1/Mmult_c_mult0000_Madd8_cy<12> (round_3/mulop_1/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_3/mulop_1/Mmult_c_mult0000_Madd8_xor<13> (round_3/mulop_1/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_3/mulop_1/Mmult_c_mult0000_Madd12_lut<17> (round_3/mulop_1/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_3/mulop_1/Mmult_c_mult0000_Madd12_cy<17> (round_3/mulop_1/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_1/Mmult_c_mult0000_Madd12_cy<18> (round_3/mulop_1/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_1/Mmult_c_mult0000_Madd12_cy<19> (round_3/mulop_1/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_1/Mmult_c_mult0000_Madd12_cy<20> (round_3/mulop_1/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_1/Mmult_c_mult0000_Madd12_cy<21> (round_3/mulop_1/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_3/mulop_1/Mmult_c_mult0000_Madd12_xor<22> (round_3/mulop_1/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_3/mulop_1/Mmult_c_mult0000_Madd14_lut<27> (round_3/mulop_1/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_3/mulop_1/Mmult_c_mult0000_Madd14_cy<27> (round_3/mulop_1/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_1/Mmult_c_mult0000_Madd14_cy<28> (round_3/mulop_1/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_1/Mmult_c_mult0000_Madd14_cy<29> (round_3/mulop_1/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_3/mulop_1/Mmult_c_mult0000_Madd14_xor<30> (round_3/mulop_1/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_3/mulop_1/Mmult_c_mult0000_Madd15_lut<30> (round_3/mulop_1/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_3/mulop_1/Mmult_c_mult0000_Madd15_cy<30> (round_3/mulop_1/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_3/mulop_1/Mmult_c_mult0000_Madd15_xor<31> (round_3/mulop_1/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_3/mulop_1/Mcompar_f_cmp_ge0000_lut<15> (round_3/mulop_1/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_3/mulop_1/Mcompar_f_cmp_ge0000_cy<15> (round_3/mulop_1/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_3/mulop_1/Mcompar_f_cmp_ge0000_cy<16> (round_3/mulop_1/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_3/mulop_1/f_mux0001<0>1 (round_3/mulop_1/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_3/mulop_1/Maddsub_f_mux0000_lut<0> (round_3/mulop_1/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_3/mulop_1/Maddsub_f_mux0000_cy<0> (round_3/mulop_1/Maddsub_f_mux0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_1/Maddsub_f_mux0000_cy<1> (round_3/mulop_1/Maddsub_f_mux0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_1/Maddsub_f_mux0000_cy<2> (round_3/mulop_1/Maddsub_f_mux0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_1/Maddsub_f_mux0000_cy<3> (round_3/mulop_1/Maddsub_f_mux0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_1/Maddsub_f_mux0000_cy<4> (round_3/mulop_1/Maddsub_f_mux0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_1/Maddsub_f_mux0000_cy<5> (round_3/mulop_1/Maddsub_f_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_1/Maddsub_f_mux0000_cy<6> (round_3/mulop_1/Maddsub_f_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_1/Maddsub_f_mux0000_cy<7> (round_3/mulop_1/Maddsub_f_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_1/Maddsub_f_mux0000_cy<8> (round_3/mulop_1/Maddsub_f_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_1/Maddsub_f_mux0000_cy<9> (round_3/mulop_1/Maddsub_f_mux0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_1/Maddsub_f_mux0000_cy<10> (round_3/mulop_1/Maddsub_f_mux0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_1/Maddsub_f_mux0000_cy<11> (round_3/mulop_1/Maddsub_f_mux0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_1/Maddsub_f_mux0000_cy<12> (round_3/mulop_1/Maddsub_f_mux0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_1/Maddsub_f_mux0000_cy<13> (round_3/mulop_1/Maddsub_f_mux0000_cy<13>)
+     XORCY:CI->O           2   0.804   0.526  round_3/mulop_1/Maddsub_f_mux0000_xor<14> (round_3/x1z1<14>)
+     LUT2:I1->O           18   0.704   1.243  round_3/xorop_1/Mxor_O_Result<14>1 (round_3/sx1<14>)
+     LUT4:I0->O            1   0.704   0.499  round_3/mulop_3/a_cmp_eq000086_SW0 (N54)
+     LUT4:I1->O           17   0.704   1.051  round_3/mulop_3/a_cmp_eq000086 (round_3/mulop_3/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_3/mulop_3/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_3/mulop_3/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_3/mulop_3/Mmult_c_mult0000_Madd2_cy<7> (round_3/mulop_3/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_3/mulop_3/Mmult_c_mult0000_Madd2_xor<8> (round_3/mulop_3/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_3/mulop_3/Mmult_c_mult0000_Madd8_lut<10> (round_3/mulop_3/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_3/mulop_3/Mmult_c_mult0000_Madd8_cy<10> (round_3/mulop_3/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_3/Mmult_c_mult0000_Madd8_cy<11> (round_3/mulop_3/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_3/Mmult_c_mult0000_Madd8_cy<12> (round_3/mulop_3/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_3/mulop_3/Mmult_c_mult0000_Madd8_xor<13> (round_3/mulop_3/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_3/mulop_3/Mmult_c_mult0000_Madd12_lut<17> (round_3/mulop_3/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_3/mulop_3/Mmult_c_mult0000_Madd12_cy<17> (round_3/mulop_3/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_3/Mmult_c_mult0000_Madd12_cy<18> (round_3/mulop_3/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_3/Mmult_c_mult0000_Madd12_cy<19> (round_3/mulop_3/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_3/Mmult_c_mult0000_Madd12_cy<20> (round_3/mulop_3/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_3/Mmult_c_mult0000_Madd12_cy<21> (round_3/mulop_3/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_3/mulop_3/Mmult_c_mult0000_Madd12_xor<22> (round_3/mulop_3/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_3/mulop_3/Mmult_c_mult0000_Madd14_lut<27> (round_3/mulop_3/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_3/mulop_3/Mmult_c_mult0000_Madd14_cy<27> (round_3/mulop_3/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_3/Mmult_c_mult0000_Madd14_cy<28> (round_3/mulop_3/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_3/Mmult_c_mult0000_Madd14_cy<29> (round_3/mulop_3/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_3/mulop_3/Mmult_c_mult0000_Madd14_xor<30> (round_3/mulop_3/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_3/mulop_3/Mmult_c_mult0000_Madd15_lut<30> (round_3/mulop_3/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_3/mulop_3/Mmult_c_mult0000_Madd15_cy<30> (round_3/mulop_3/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_3/mulop_3/Mmult_c_mult0000_Madd15_xor<31> (round_3/mulop_3/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_3/mulop_3/Mcompar_f_cmp_ge0000_lut<15> (round_3/mulop_3/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_3/mulop_3/Mcompar_f_cmp_ge0000_cy<15> (round_3/mulop_3/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_3/mulop_3/Mcompar_f_cmp_ge0000_cy<16> (round_3/mulop_3/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_3/mulop_3/f_mux0001<0>1 (round_3/mulop_3/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_3/mulop_3/Maddsub_f_mux0000_lut<0> (round_3/mulop_3/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_3/mulop_3/Maddsub_f_mux0000_cy<0> (round_3/mulop_3/Maddsub_f_mux0000_cy<0>)
+     XORCY:CI->O           2   0.804   0.482  round_3/mulop_3/Maddsub_f_mux0000_xor<1> (round_3/sm3<1>)
+     LUT3:I2->O            1   0.704   0.000  round_3/addop_3/Madd_O_lut<1> (round_3/addop_3/Madd_O_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  round_3/addop_3/Madd_O_cy<1> (round_3/addop_3/Madd_O_cy<1>)
+     XORCY:CI->O          18   0.804   1.103  round_3/addop_3/Madd_O_xor<2> (round_3/sa3<2>)
+     LUT3:I2->O            1   0.704   0.595  round_3/mulop_4/a_cmp_eq00008 (round_3/mulop_4/a_cmp_eq00008)
+     LUT4:I0->O            1   0.704   0.455  round_3/mulop_4/a_cmp_eq000024 (round_3/mulop_4/a_cmp_eq000024)
+     LUT4:I2->O           17   0.704   1.051  round_3/mulop_4/a_cmp_eq000088 (round_3/mulop_4/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_3/mulop_4/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_3/mulop_4/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_3/mulop_4/Mmult_c_mult0000_Madd2_cy<7> (round_3/mulop_4/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_3/mulop_4/Mmult_c_mult0000_Madd2_xor<8> (round_3/mulop_4/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_3/mulop_4/Mmult_c_mult0000_Madd8_lut<10> (round_3/mulop_4/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_3/mulop_4/Mmult_c_mult0000_Madd8_cy<10> (round_3/mulop_4/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_4/Mmult_c_mult0000_Madd8_cy<11> (round_3/mulop_4/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_4/Mmult_c_mult0000_Madd8_cy<12> (round_3/mulop_4/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_3/mulop_4/Mmult_c_mult0000_Madd8_xor<13> (round_3/mulop_4/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_3/mulop_4/Mmult_c_mult0000_Madd12_lut<17> (round_3/mulop_4/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_3/mulop_4/Mmult_c_mult0000_Madd12_cy<17> (round_3/mulop_4/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_4/Mmult_c_mult0000_Madd12_cy<18> (round_3/mulop_4/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_4/Mmult_c_mult0000_Madd12_cy<19> (round_3/mulop_4/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_4/Mmult_c_mult0000_Madd12_cy<20> (round_3/mulop_4/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_4/Mmult_c_mult0000_Madd12_cy<21> (round_3/mulop_4/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_3/mulop_4/Mmult_c_mult0000_Madd12_xor<22> (round_3/mulop_4/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_3/mulop_4/Mmult_c_mult0000_Madd14_lut<27> (round_3/mulop_4/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_3/mulop_4/Mmult_c_mult0000_Madd14_cy<27> (round_3/mulop_4/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_4/Mmult_c_mult0000_Madd14_cy<28> (round_3/mulop_4/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_4/Mmult_c_mult0000_Madd14_cy<29> (round_3/mulop_4/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_3/mulop_4/Mmult_c_mult0000_Madd14_xor<30> (round_3/mulop_4/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_3/mulop_4/Mmult_c_mult0000_Madd15_lut<30> (round_3/mulop_4/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_3/mulop_4/Mmult_c_mult0000_Madd15_cy<30> (round_3/mulop_4/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_3/mulop_4/Mmult_c_mult0000_Madd15_xor<31> (round_3/mulop_4/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_3/mulop_4/Mcompar_f_cmp_ge0000_lut<15> (round_3/mulop_4/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_3/mulop_4/Mcompar_f_cmp_ge0000_cy<15> (round_3/mulop_4/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_3/mulop_4/Mcompar_f_cmp_ge0000_cy<16> (round_3/mulop_4/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_3/mulop_4/f_mux0001<0>1 (round_3/mulop_4/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_3/mulop_4/Maddsub_f_mux0000_lut<0> (round_3/mulop_4/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_3/mulop_4/Maddsub_f_mux0000_cy<0> (round_3/mulop_4/Maddsub_f_mux0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_4/Maddsub_f_mux0000_cy<1> (round_3/mulop_4/Maddsub_f_mux0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_4/Maddsub_f_mux0000_cy<2> (round_3/mulop_4/Maddsub_f_mux0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_4/Maddsub_f_mux0000_cy<3> (round_3/mulop_4/Maddsub_f_mux0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_4/Maddsub_f_mux0000_cy<4> (round_3/mulop_4/Maddsub_f_mux0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_4/Maddsub_f_mux0000_cy<5> (round_3/mulop_4/Maddsub_f_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_4/Maddsub_f_mux0000_cy<6> (round_3/mulop_4/Maddsub_f_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_4/Maddsub_f_mux0000_cy<7> (round_3/mulop_4/Maddsub_f_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_4/Maddsub_f_mux0000_cy<8> (round_3/mulop_4/Maddsub_f_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_4/Maddsub_f_mux0000_cy<9> (round_3/mulop_4/Maddsub_f_mux0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_4/Maddsub_f_mux0000_cy<10> (round_3/mulop_4/Maddsub_f_mux0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_4/Maddsub_f_mux0000_cy<11> (round_3/mulop_4/Maddsub_f_mux0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_4/Maddsub_f_mux0000_cy<12> (round_3/mulop_4/Maddsub_f_mux0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  round_3/mulop_4/Maddsub_f_mux0000_cy<13> (round_3/mulop_4/Maddsub_f_mux0000_cy<13>)
+     XORCY:CI->O           4   0.804   0.762  round_3/mulop_4/Maddsub_f_mux0000_xor<14> (round_3/sm4<14>)
+     LUT2:I0->O           18   0.704   1.243  round_3/xorop_3/Mxor_O_Result<14>1 (sr3y1<14>)
+     LUT4:I0->O            1   0.704   0.499  round_4/mulop_1/a_cmp_eq000086_SW0 (N50)
+     LUT4:I1->O           17   0.704   1.051  round_4/mulop_1/a_cmp_eq000086 (round_4/mulop_1/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_4/mulop_1/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_4/mulop_1/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_4/mulop_1/Mmult_c_mult0000_Madd2_cy<7> (round_4/mulop_1/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_4/mulop_1/Mmult_c_mult0000_Madd2_xor<8> (round_4/mulop_1/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_4/mulop_1/Mmult_c_mult0000_Madd8_lut<10> (round_4/mulop_1/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_4/mulop_1/Mmult_c_mult0000_Madd8_cy<10> (round_4/mulop_1/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_1/Mmult_c_mult0000_Madd8_cy<11> (round_4/mulop_1/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_1/Mmult_c_mult0000_Madd8_cy<12> (round_4/mulop_1/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_4/mulop_1/Mmult_c_mult0000_Madd8_xor<13> (round_4/mulop_1/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_4/mulop_1/Mmult_c_mult0000_Madd12_lut<17> (round_4/mulop_1/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_4/mulop_1/Mmult_c_mult0000_Madd12_cy<17> (round_4/mulop_1/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_1/Mmult_c_mult0000_Madd12_cy<18> (round_4/mulop_1/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_1/Mmult_c_mult0000_Madd12_cy<19> (round_4/mulop_1/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_1/Mmult_c_mult0000_Madd12_cy<20> (round_4/mulop_1/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_1/Mmult_c_mult0000_Madd12_cy<21> (round_4/mulop_1/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_4/mulop_1/Mmult_c_mult0000_Madd12_xor<22> (round_4/mulop_1/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_4/mulop_1/Mmult_c_mult0000_Madd14_lut<27> (round_4/mulop_1/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_4/mulop_1/Mmult_c_mult0000_Madd14_cy<27> (round_4/mulop_1/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_1/Mmult_c_mult0000_Madd14_cy<28> (round_4/mulop_1/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_1/Mmult_c_mult0000_Madd14_cy<29> (round_4/mulop_1/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_4/mulop_1/Mmult_c_mult0000_Madd14_xor<30> (round_4/mulop_1/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_4/mulop_1/Mmult_c_mult0000_Madd15_lut<30> (round_4/mulop_1/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_4/mulop_1/Mmult_c_mult0000_Madd15_cy<30> (round_4/mulop_1/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_4/mulop_1/Mmult_c_mult0000_Madd15_xor<31> (round_4/mulop_1/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_4/mulop_1/Mcompar_f_cmp_ge0000_lut<15> (round_4/mulop_1/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_4/mulop_1/Mcompar_f_cmp_ge0000_cy<15> (round_4/mulop_1/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_4/mulop_1/Mcompar_f_cmp_ge0000_cy<16> (round_4/mulop_1/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_4/mulop_1/f_mux0001<0>1 (round_4/mulop_1/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_4/mulop_1/Maddsub_f_mux0000_lut<0> (round_4/mulop_1/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_4/mulop_1/Maddsub_f_mux0000_cy<0> (round_4/mulop_1/Maddsub_f_mux0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_1/Maddsub_f_mux0000_cy<1> (round_4/mulop_1/Maddsub_f_mux0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_1/Maddsub_f_mux0000_cy<2> (round_4/mulop_1/Maddsub_f_mux0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_1/Maddsub_f_mux0000_cy<3> (round_4/mulop_1/Maddsub_f_mux0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_1/Maddsub_f_mux0000_cy<4> (round_4/mulop_1/Maddsub_f_mux0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_1/Maddsub_f_mux0000_cy<5> (round_4/mulop_1/Maddsub_f_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_1/Maddsub_f_mux0000_cy<6> (round_4/mulop_1/Maddsub_f_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_1/Maddsub_f_mux0000_cy<7> (round_4/mulop_1/Maddsub_f_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_1/Maddsub_f_mux0000_cy<8> (round_4/mulop_1/Maddsub_f_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_1/Maddsub_f_mux0000_cy<9> (round_4/mulop_1/Maddsub_f_mux0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_1/Maddsub_f_mux0000_cy<10> (round_4/mulop_1/Maddsub_f_mux0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_1/Maddsub_f_mux0000_cy<11> (round_4/mulop_1/Maddsub_f_mux0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_1/Maddsub_f_mux0000_cy<12> (round_4/mulop_1/Maddsub_f_mux0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_1/Maddsub_f_mux0000_cy<13> (round_4/mulop_1/Maddsub_f_mux0000_cy<13>)
+     XORCY:CI->O           2   0.804   0.526  round_4/mulop_1/Maddsub_f_mux0000_xor<14> (round_4/x1z1<14>)
+     LUT2:I1->O           18   0.704   1.243  round_4/xorop_1/Mxor_O_Result<14>1 (round_4/sx1<14>)
+     LUT4:I0->O            1   0.704   0.499  round_4/mulop_3/a_cmp_eq000086_SW0 (N66)
+     LUT4:I1->O           17   0.704   1.051  round_4/mulop_3/a_cmp_eq000086 (round_4/mulop_3/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_4/mulop_3/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_4/mulop_3/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_4/mulop_3/Mmult_c_mult0000_Madd2_cy<7> (round_4/mulop_3/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_4/mulop_3/Mmult_c_mult0000_Madd2_xor<8> (round_4/mulop_3/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_4/mulop_3/Mmult_c_mult0000_Madd8_lut<10> (round_4/mulop_3/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_4/mulop_3/Mmult_c_mult0000_Madd8_cy<10> (round_4/mulop_3/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_3/Mmult_c_mult0000_Madd8_cy<11> (round_4/mulop_3/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_3/Mmult_c_mult0000_Madd8_cy<12> (round_4/mulop_3/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_4/mulop_3/Mmult_c_mult0000_Madd8_xor<13> (round_4/mulop_3/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_4/mulop_3/Mmult_c_mult0000_Madd12_lut<17> (round_4/mulop_3/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_4/mulop_3/Mmult_c_mult0000_Madd12_cy<17> (round_4/mulop_3/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_3/Mmult_c_mult0000_Madd12_cy<18> (round_4/mulop_3/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_3/Mmult_c_mult0000_Madd12_cy<19> (round_4/mulop_3/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_3/Mmult_c_mult0000_Madd12_cy<20> (round_4/mulop_3/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_3/Mmult_c_mult0000_Madd12_cy<21> (round_4/mulop_3/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_4/mulop_3/Mmult_c_mult0000_Madd12_xor<22> (round_4/mulop_3/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_4/mulop_3/Mmult_c_mult0000_Madd14_lut<27> (round_4/mulop_3/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_4/mulop_3/Mmult_c_mult0000_Madd14_cy<27> (round_4/mulop_3/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_3/Mmult_c_mult0000_Madd14_cy<28> (round_4/mulop_3/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_3/Mmult_c_mult0000_Madd14_cy<29> (round_4/mulop_3/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_4/mulop_3/Mmult_c_mult0000_Madd14_xor<30> (round_4/mulop_3/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_4/mulop_3/Mmult_c_mult0000_Madd15_lut<30> (round_4/mulop_3/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_4/mulop_3/Mmult_c_mult0000_Madd15_cy<30> (round_4/mulop_3/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_4/mulop_3/Mmult_c_mult0000_Madd15_xor<31> (round_4/mulop_3/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_4/mulop_3/Mcompar_f_cmp_ge0000_lut<15> (round_4/mulop_3/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_4/mulop_3/Mcompar_f_cmp_ge0000_cy<15> (round_4/mulop_3/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_4/mulop_3/Mcompar_f_cmp_ge0000_cy<16> (round_4/mulop_3/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_4/mulop_3/f_mux0001<0>1 (round_4/mulop_3/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_4/mulop_3/Maddsub_f_mux0000_lut<0> (round_4/mulop_3/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_4/mulop_3/Maddsub_f_mux0000_cy<0> (round_4/mulop_3/Maddsub_f_mux0000_cy<0>)
+     XORCY:CI->O           2   0.804   0.482  round_4/mulop_3/Maddsub_f_mux0000_xor<1> (round_4/sm3<1>)
+     LUT3:I2->O            1   0.704   0.000  round_4/addop_3/Madd_O_lut<1> (round_4/addop_3/Madd_O_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  round_4/addop_3/Madd_O_cy<1> (round_4/addop_3/Madd_O_cy<1>)
+     XORCY:CI->O          18   0.804   1.103  round_4/addop_3/Madd_O_xor<2> (round_4/sa3<2>)
+     LUT3:I2->O            1   0.704   0.595  round_4/mulop_4/a_cmp_eq00008 (round_4/mulop_4/a_cmp_eq00008)
+     LUT4:I0->O            1   0.704   0.455  round_4/mulop_4/a_cmp_eq000024 (round_4/mulop_4/a_cmp_eq000024)
+     LUT4:I2->O           17   0.704   1.051  round_4/mulop_4/a_cmp_eq000088 (round_4/mulop_4/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_4/mulop_4/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_4/mulop_4/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_4/mulop_4/Mmult_c_mult0000_Madd2_cy<7> (round_4/mulop_4/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_4/mulop_4/Mmult_c_mult0000_Madd2_xor<8> (round_4/mulop_4/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_4/mulop_4/Mmult_c_mult0000_Madd8_lut<10> (round_4/mulop_4/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_4/mulop_4/Mmult_c_mult0000_Madd8_cy<10> (round_4/mulop_4/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_4/Mmult_c_mult0000_Madd8_cy<11> (round_4/mulop_4/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_4/Mmult_c_mult0000_Madd8_cy<12> (round_4/mulop_4/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_4/mulop_4/Mmult_c_mult0000_Madd8_xor<13> (round_4/mulop_4/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_4/mulop_4/Mmult_c_mult0000_Madd12_lut<17> (round_4/mulop_4/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_4/mulop_4/Mmult_c_mult0000_Madd12_cy<17> (round_4/mulop_4/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_4/Mmult_c_mult0000_Madd12_cy<18> (round_4/mulop_4/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_4/Mmult_c_mult0000_Madd12_cy<19> (round_4/mulop_4/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_4/Mmult_c_mult0000_Madd12_cy<20> (round_4/mulop_4/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_4/Mmult_c_mult0000_Madd12_cy<21> (round_4/mulop_4/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_4/mulop_4/Mmult_c_mult0000_Madd12_xor<22> (round_4/mulop_4/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_4/mulop_4/Mmult_c_mult0000_Madd14_lut<27> (round_4/mulop_4/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_4/mulop_4/Mmult_c_mult0000_Madd14_cy<27> (round_4/mulop_4/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_4/Mmult_c_mult0000_Madd14_cy<28> (round_4/mulop_4/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_4/Mmult_c_mult0000_Madd14_cy<29> (round_4/mulop_4/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_4/mulop_4/Mmult_c_mult0000_Madd14_xor<30> (round_4/mulop_4/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_4/mulop_4/Mmult_c_mult0000_Madd15_lut<30> (round_4/mulop_4/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_4/mulop_4/Mmult_c_mult0000_Madd15_cy<30> (round_4/mulop_4/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_4/mulop_4/Mmult_c_mult0000_Madd15_xor<31> (round_4/mulop_4/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_4/mulop_4/Mcompar_f_cmp_ge0000_lut<15> (round_4/mulop_4/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_4/mulop_4/Mcompar_f_cmp_ge0000_cy<15> (round_4/mulop_4/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_4/mulop_4/Mcompar_f_cmp_ge0000_cy<16> (round_4/mulop_4/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_4/mulop_4/f_mux0001<0>1 (round_4/mulop_4/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_4/mulop_4/Maddsub_f_mux0000_lut<0> (round_4/mulop_4/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_4/mulop_4/Maddsub_f_mux0000_cy<0> (round_4/mulop_4/Maddsub_f_mux0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_4/Maddsub_f_mux0000_cy<1> (round_4/mulop_4/Maddsub_f_mux0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_4/Maddsub_f_mux0000_cy<2> (round_4/mulop_4/Maddsub_f_mux0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_4/Maddsub_f_mux0000_cy<3> (round_4/mulop_4/Maddsub_f_mux0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_4/Maddsub_f_mux0000_cy<4> (round_4/mulop_4/Maddsub_f_mux0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_4/Maddsub_f_mux0000_cy<5> (round_4/mulop_4/Maddsub_f_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_4/Maddsub_f_mux0000_cy<6> (round_4/mulop_4/Maddsub_f_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_4/Maddsub_f_mux0000_cy<7> (round_4/mulop_4/Maddsub_f_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_4/Maddsub_f_mux0000_cy<8> (round_4/mulop_4/Maddsub_f_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_4/Maddsub_f_mux0000_cy<9> (round_4/mulop_4/Maddsub_f_mux0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_4/Maddsub_f_mux0000_cy<10> (round_4/mulop_4/Maddsub_f_mux0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_4/Maddsub_f_mux0000_cy<11> (round_4/mulop_4/Maddsub_f_mux0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_4/Maddsub_f_mux0000_cy<12> (round_4/mulop_4/Maddsub_f_mux0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  round_4/mulop_4/Maddsub_f_mux0000_cy<13> (round_4/mulop_4/Maddsub_f_mux0000_cy<13>)
+     XORCY:CI->O           4   0.804   0.762  round_4/mulop_4/Maddsub_f_mux0000_xor<14> (round_4/sm4<14>)
+     LUT2:I0->O           18   0.704   1.243  round_4/xorop_3/Mxor_O_Result<14>1 (sr4y1<14>)
+     LUT4:I0->O            1   0.704   0.499  round_5/mulop_1/a_cmp_eq000086_SW0 (N62)
+     LUT4:I1->O           17   0.704   1.051  round_5/mulop_1/a_cmp_eq000086 (round_5/mulop_1/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_5/mulop_1/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_5/mulop_1/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_5/mulop_1/Mmult_c_mult0000_Madd2_cy<7> (round_5/mulop_1/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_5/mulop_1/Mmult_c_mult0000_Madd2_xor<8> (round_5/mulop_1/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_5/mulop_1/Mmult_c_mult0000_Madd8_lut<10> (round_5/mulop_1/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_5/mulop_1/Mmult_c_mult0000_Madd8_cy<10> (round_5/mulop_1/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_1/Mmult_c_mult0000_Madd8_cy<11> (round_5/mulop_1/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_1/Mmult_c_mult0000_Madd8_cy<12> (round_5/mulop_1/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_5/mulop_1/Mmult_c_mult0000_Madd8_xor<13> (round_5/mulop_1/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_5/mulop_1/Mmult_c_mult0000_Madd12_lut<17> (round_5/mulop_1/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_5/mulop_1/Mmult_c_mult0000_Madd12_cy<17> (round_5/mulop_1/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_1/Mmult_c_mult0000_Madd12_cy<18> (round_5/mulop_1/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_1/Mmult_c_mult0000_Madd12_cy<19> (round_5/mulop_1/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_1/Mmult_c_mult0000_Madd12_cy<20> (round_5/mulop_1/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_1/Mmult_c_mult0000_Madd12_cy<21> (round_5/mulop_1/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_5/mulop_1/Mmult_c_mult0000_Madd12_xor<22> (round_5/mulop_1/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_5/mulop_1/Mmult_c_mult0000_Madd14_lut<27> (round_5/mulop_1/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_5/mulop_1/Mmult_c_mult0000_Madd14_cy<27> (round_5/mulop_1/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_1/Mmult_c_mult0000_Madd14_cy<28> (round_5/mulop_1/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_1/Mmult_c_mult0000_Madd14_cy<29> (round_5/mulop_1/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_5/mulop_1/Mmult_c_mult0000_Madd14_xor<30> (round_5/mulop_1/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_5/mulop_1/Mmult_c_mult0000_Madd15_lut<30> (round_5/mulop_1/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_5/mulop_1/Mmult_c_mult0000_Madd15_cy<30> (round_5/mulop_1/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_5/mulop_1/Mmult_c_mult0000_Madd15_xor<31> (round_5/mulop_1/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_5/mulop_1/Mcompar_f_cmp_ge0000_lut<15> (round_5/mulop_1/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_5/mulop_1/Mcompar_f_cmp_ge0000_cy<15> (round_5/mulop_1/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_5/mulop_1/Mcompar_f_cmp_ge0000_cy<16> (round_5/mulop_1/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_5/mulop_1/f_mux0001<0>1 (round_5/mulop_1/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_5/mulop_1/Maddsub_f_mux0000_lut<0> (round_5/mulop_1/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_5/mulop_1/Maddsub_f_mux0000_cy<0> (round_5/mulop_1/Maddsub_f_mux0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_1/Maddsub_f_mux0000_cy<1> (round_5/mulop_1/Maddsub_f_mux0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_1/Maddsub_f_mux0000_cy<2> (round_5/mulop_1/Maddsub_f_mux0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_1/Maddsub_f_mux0000_cy<3> (round_5/mulop_1/Maddsub_f_mux0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_1/Maddsub_f_mux0000_cy<4> (round_5/mulop_1/Maddsub_f_mux0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_1/Maddsub_f_mux0000_cy<5> (round_5/mulop_1/Maddsub_f_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_1/Maddsub_f_mux0000_cy<6> (round_5/mulop_1/Maddsub_f_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_1/Maddsub_f_mux0000_cy<7> (round_5/mulop_1/Maddsub_f_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_1/Maddsub_f_mux0000_cy<8> (round_5/mulop_1/Maddsub_f_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_1/Maddsub_f_mux0000_cy<9> (round_5/mulop_1/Maddsub_f_mux0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_1/Maddsub_f_mux0000_cy<10> (round_5/mulop_1/Maddsub_f_mux0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_1/Maddsub_f_mux0000_cy<11> (round_5/mulop_1/Maddsub_f_mux0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_1/Maddsub_f_mux0000_cy<12> (round_5/mulop_1/Maddsub_f_mux0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_1/Maddsub_f_mux0000_cy<13> (round_5/mulop_1/Maddsub_f_mux0000_cy<13>)
+     XORCY:CI->O           2   0.804   0.526  round_5/mulop_1/Maddsub_f_mux0000_xor<14> (round_5/x1z1<14>)
+     LUT2:I1->O           18   0.704   1.243  round_5/xorop_1/Mxor_O_Result<14>1 (round_5/sx1<14>)
+     LUT4:I0->O            1   0.704   0.499  round_5/mulop_3/a_cmp_eq000086_SW0 (N60)
+     LUT4:I1->O           17   0.704   1.051  round_5/mulop_3/a_cmp_eq000086 (round_5/mulop_3/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_5/mulop_3/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_5/mulop_3/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_5/mulop_3/Mmult_c_mult0000_Madd2_cy<7> (round_5/mulop_3/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_5/mulop_3/Mmult_c_mult0000_Madd2_xor<8> (round_5/mulop_3/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_5/mulop_3/Mmult_c_mult0000_Madd8_lut<10> (round_5/mulop_3/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_5/mulop_3/Mmult_c_mult0000_Madd8_cy<10> (round_5/mulop_3/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_3/Mmult_c_mult0000_Madd8_cy<11> (round_5/mulop_3/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_3/Mmult_c_mult0000_Madd8_cy<12> (round_5/mulop_3/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_5/mulop_3/Mmult_c_mult0000_Madd8_xor<13> (round_5/mulop_3/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_5/mulop_3/Mmult_c_mult0000_Madd12_lut<17> (round_5/mulop_3/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_5/mulop_3/Mmult_c_mult0000_Madd12_cy<17> (round_5/mulop_3/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_3/Mmult_c_mult0000_Madd12_cy<18> (round_5/mulop_3/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_3/Mmult_c_mult0000_Madd12_cy<19> (round_5/mulop_3/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_3/Mmult_c_mult0000_Madd12_cy<20> (round_5/mulop_3/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_3/Mmult_c_mult0000_Madd12_cy<21> (round_5/mulop_3/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_5/mulop_3/Mmult_c_mult0000_Madd12_xor<22> (round_5/mulop_3/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_5/mulop_3/Mmult_c_mult0000_Madd14_lut<27> (round_5/mulop_3/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_5/mulop_3/Mmult_c_mult0000_Madd14_cy<27> (round_5/mulop_3/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_3/Mmult_c_mult0000_Madd14_cy<28> (round_5/mulop_3/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_3/Mmult_c_mult0000_Madd14_cy<29> (round_5/mulop_3/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_5/mulop_3/Mmult_c_mult0000_Madd14_xor<30> (round_5/mulop_3/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_5/mulop_3/Mmult_c_mult0000_Madd15_lut<30> (round_5/mulop_3/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_5/mulop_3/Mmult_c_mult0000_Madd15_cy<30> (round_5/mulop_3/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_5/mulop_3/Mmult_c_mult0000_Madd15_xor<31> (round_5/mulop_3/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_5/mulop_3/Mcompar_f_cmp_ge0000_lut<15> (round_5/mulop_3/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_5/mulop_3/Mcompar_f_cmp_ge0000_cy<15> (round_5/mulop_3/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_5/mulop_3/Mcompar_f_cmp_ge0000_cy<16> (round_5/mulop_3/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_5/mulop_3/f_mux0001<0>1 (round_5/mulop_3/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_5/mulop_3/Maddsub_f_mux0000_lut<0> (round_5/mulop_3/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_5/mulop_3/Maddsub_f_mux0000_cy<0> (round_5/mulop_3/Maddsub_f_mux0000_cy<0>)
+     XORCY:CI->O           2   0.804   0.482  round_5/mulop_3/Maddsub_f_mux0000_xor<1> (round_5/sm3<1>)
+     LUT3:I2->O            1   0.704   0.000  round_5/addop_3/Madd_O_lut<1> (round_5/addop_3/Madd_O_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  round_5/addop_3/Madd_O_cy<1> (round_5/addop_3/Madd_O_cy<1>)
+     XORCY:CI->O          18   0.804   1.103  round_5/addop_3/Madd_O_xor<2> (round_5/sa3<2>)
+     LUT3:I2->O            1   0.704   0.595  round_5/mulop_4/a_cmp_eq00008 (round_5/mulop_4/a_cmp_eq00008)
+     LUT4:I0->O            1   0.704   0.455  round_5/mulop_4/a_cmp_eq000024 (round_5/mulop_4/a_cmp_eq000024)
+     LUT4:I2->O           17   0.704   1.051  round_5/mulop_4/a_cmp_eq000088 (round_5/mulop_4/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_5/mulop_4/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_5/mulop_4/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_5/mulop_4/Mmult_c_mult0000_Madd2_cy<7> (round_5/mulop_4/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_5/mulop_4/Mmult_c_mult0000_Madd2_xor<8> (round_5/mulop_4/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_5/mulop_4/Mmult_c_mult0000_Madd8_lut<10> (round_5/mulop_4/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_5/mulop_4/Mmult_c_mult0000_Madd8_cy<10> (round_5/mulop_4/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_4/Mmult_c_mult0000_Madd8_cy<11> (round_5/mulop_4/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_4/Mmult_c_mult0000_Madd8_cy<12> (round_5/mulop_4/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_5/mulop_4/Mmult_c_mult0000_Madd8_xor<13> (round_5/mulop_4/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_5/mulop_4/Mmult_c_mult0000_Madd12_lut<17> (round_5/mulop_4/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_5/mulop_4/Mmult_c_mult0000_Madd12_cy<17> (round_5/mulop_4/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_4/Mmult_c_mult0000_Madd12_cy<18> (round_5/mulop_4/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_4/Mmult_c_mult0000_Madd12_cy<19> (round_5/mulop_4/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_4/Mmult_c_mult0000_Madd12_cy<20> (round_5/mulop_4/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_4/Mmult_c_mult0000_Madd12_cy<21> (round_5/mulop_4/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_5/mulop_4/Mmult_c_mult0000_Madd12_xor<22> (round_5/mulop_4/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_5/mulop_4/Mmult_c_mult0000_Madd14_lut<27> (round_5/mulop_4/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_5/mulop_4/Mmult_c_mult0000_Madd14_cy<27> (round_5/mulop_4/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_4/Mmult_c_mult0000_Madd14_cy<28> (round_5/mulop_4/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_4/Mmult_c_mult0000_Madd14_cy<29> (round_5/mulop_4/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_5/mulop_4/Mmult_c_mult0000_Madd14_xor<30> (round_5/mulop_4/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_5/mulop_4/Mmult_c_mult0000_Madd15_lut<30> (round_5/mulop_4/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_5/mulop_4/Mmult_c_mult0000_Madd15_cy<30> (round_5/mulop_4/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_5/mulop_4/Mmult_c_mult0000_Madd15_xor<31> (round_5/mulop_4/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_5/mulop_4/Mcompar_f_cmp_ge0000_lut<15> (round_5/mulop_4/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_5/mulop_4/Mcompar_f_cmp_ge0000_cy<15> (round_5/mulop_4/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_5/mulop_4/Mcompar_f_cmp_ge0000_cy<16> (round_5/mulop_4/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_5/mulop_4/f_mux0001<0>1 (round_5/mulop_4/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_5/mulop_4/Maddsub_f_mux0000_lut<0> (round_5/mulop_4/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_5/mulop_4/Maddsub_f_mux0000_cy<0> (round_5/mulop_4/Maddsub_f_mux0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_4/Maddsub_f_mux0000_cy<1> (round_5/mulop_4/Maddsub_f_mux0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_4/Maddsub_f_mux0000_cy<2> (round_5/mulop_4/Maddsub_f_mux0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_4/Maddsub_f_mux0000_cy<3> (round_5/mulop_4/Maddsub_f_mux0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_4/Maddsub_f_mux0000_cy<4> (round_5/mulop_4/Maddsub_f_mux0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_4/Maddsub_f_mux0000_cy<5> (round_5/mulop_4/Maddsub_f_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_4/Maddsub_f_mux0000_cy<6> (round_5/mulop_4/Maddsub_f_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_4/Maddsub_f_mux0000_cy<7> (round_5/mulop_4/Maddsub_f_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_4/Maddsub_f_mux0000_cy<8> (round_5/mulop_4/Maddsub_f_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_4/Maddsub_f_mux0000_cy<9> (round_5/mulop_4/Maddsub_f_mux0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_4/Maddsub_f_mux0000_cy<10> (round_5/mulop_4/Maddsub_f_mux0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_4/Maddsub_f_mux0000_cy<11> (round_5/mulop_4/Maddsub_f_mux0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_4/Maddsub_f_mux0000_cy<12> (round_5/mulop_4/Maddsub_f_mux0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  round_5/mulop_4/Maddsub_f_mux0000_cy<13> (round_5/mulop_4/Maddsub_f_mux0000_cy<13>)
+     XORCY:CI->O           4   0.804   0.762  round_5/mulop_4/Maddsub_f_mux0000_xor<14> (round_5/sm4<14>)
+     LUT2:I0->O           18   0.704   1.243  round_5/xorop_3/Mxor_O_Result<14>1 (sr5y1<14>)
+     LUT4:I0->O            1   0.704   0.499  round_6/mulop_1/a_cmp_eq000086_SW0 (N56)
+     LUT4:I1->O           17   0.704   1.051  round_6/mulop_1/a_cmp_eq000086 (round_6/mulop_1/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_6/mulop_1/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_6/mulop_1/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_6/mulop_1/Mmult_c_mult0000_Madd2_cy<7> (round_6/mulop_1/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_6/mulop_1/Mmult_c_mult0000_Madd2_xor<8> (round_6/mulop_1/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_6/mulop_1/Mmult_c_mult0000_Madd8_lut<10> (round_6/mulop_1/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_6/mulop_1/Mmult_c_mult0000_Madd8_cy<10> (round_6/mulop_1/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_1/Mmult_c_mult0000_Madd8_cy<11> (round_6/mulop_1/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_1/Mmult_c_mult0000_Madd8_cy<12> (round_6/mulop_1/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_6/mulop_1/Mmult_c_mult0000_Madd8_xor<13> (round_6/mulop_1/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_6/mulop_1/Mmult_c_mult0000_Madd12_lut<17> (round_6/mulop_1/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_6/mulop_1/Mmult_c_mult0000_Madd12_cy<17> (round_6/mulop_1/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_1/Mmult_c_mult0000_Madd12_cy<18> (round_6/mulop_1/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_1/Mmult_c_mult0000_Madd12_cy<19> (round_6/mulop_1/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_1/Mmult_c_mult0000_Madd12_cy<20> (round_6/mulop_1/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_1/Mmult_c_mult0000_Madd12_cy<21> (round_6/mulop_1/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_6/mulop_1/Mmult_c_mult0000_Madd12_xor<22> (round_6/mulop_1/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_6/mulop_1/Mmult_c_mult0000_Madd14_lut<27> (round_6/mulop_1/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_6/mulop_1/Mmult_c_mult0000_Madd14_cy<27> (round_6/mulop_1/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_1/Mmult_c_mult0000_Madd14_cy<28> (round_6/mulop_1/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_1/Mmult_c_mult0000_Madd14_cy<29> (round_6/mulop_1/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_6/mulop_1/Mmult_c_mult0000_Madd14_xor<30> (round_6/mulop_1/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_6/mulop_1/Mmult_c_mult0000_Madd15_lut<30> (round_6/mulop_1/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_6/mulop_1/Mmult_c_mult0000_Madd15_cy<30> (round_6/mulop_1/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_6/mulop_1/Mmult_c_mult0000_Madd15_xor<31> (round_6/mulop_1/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_6/mulop_1/Mcompar_f_cmp_ge0000_lut<15> (round_6/mulop_1/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_6/mulop_1/Mcompar_f_cmp_ge0000_cy<15> (round_6/mulop_1/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_6/mulop_1/Mcompar_f_cmp_ge0000_cy<16> (round_6/mulop_1/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_6/mulop_1/f_mux0001<0>1 (round_6/mulop_1/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_6/mulop_1/Maddsub_f_mux0000_lut<0> (round_6/mulop_1/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_6/mulop_1/Maddsub_f_mux0000_cy<0> (round_6/mulop_1/Maddsub_f_mux0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_1/Maddsub_f_mux0000_cy<1> (round_6/mulop_1/Maddsub_f_mux0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_1/Maddsub_f_mux0000_cy<2> (round_6/mulop_1/Maddsub_f_mux0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_1/Maddsub_f_mux0000_cy<3> (round_6/mulop_1/Maddsub_f_mux0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_1/Maddsub_f_mux0000_cy<4> (round_6/mulop_1/Maddsub_f_mux0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_1/Maddsub_f_mux0000_cy<5> (round_6/mulop_1/Maddsub_f_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_1/Maddsub_f_mux0000_cy<6> (round_6/mulop_1/Maddsub_f_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_1/Maddsub_f_mux0000_cy<7> (round_6/mulop_1/Maddsub_f_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_1/Maddsub_f_mux0000_cy<8> (round_6/mulop_1/Maddsub_f_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_1/Maddsub_f_mux0000_cy<9> (round_6/mulop_1/Maddsub_f_mux0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_1/Maddsub_f_mux0000_cy<10> (round_6/mulop_1/Maddsub_f_mux0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_1/Maddsub_f_mux0000_cy<11> (round_6/mulop_1/Maddsub_f_mux0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_1/Maddsub_f_mux0000_cy<12> (round_6/mulop_1/Maddsub_f_mux0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_1/Maddsub_f_mux0000_cy<13> (round_6/mulop_1/Maddsub_f_mux0000_cy<13>)
+     XORCY:CI->O           2   0.804   0.526  round_6/mulop_1/Maddsub_f_mux0000_xor<14> (round_6/x1z1<14>)
+     LUT2:I1->O           18   0.704   1.243  round_6/xorop_1/Mxor_O_Result<14>1 (round_6/sx1<14>)
+     LUT4:I0->O            1   0.704   0.499  round_6/mulop_3/a_cmp_eq000086_SW0 (N48)
+     LUT4:I1->O           17   0.704   1.051  round_6/mulop_3/a_cmp_eq000086 (round_6/mulop_3/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_6/mulop_3/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_6/mulop_3/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_6/mulop_3/Mmult_c_mult0000_Madd2_cy<7> (round_6/mulop_3/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_6/mulop_3/Mmult_c_mult0000_Madd2_xor<8> (round_6/mulop_3/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_6/mulop_3/Mmult_c_mult0000_Madd8_lut<10> (round_6/mulop_3/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_6/mulop_3/Mmult_c_mult0000_Madd8_cy<10> (round_6/mulop_3/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_3/Mmult_c_mult0000_Madd8_cy<11> (round_6/mulop_3/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_3/Mmult_c_mult0000_Madd8_cy<12> (round_6/mulop_3/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_6/mulop_3/Mmult_c_mult0000_Madd8_xor<13> (round_6/mulop_3/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_6/mulop_3/Mmult_c_mult0000_Madd12_lut<17> (round_6/mulop_3/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_6/mulop_3/Mmult_c_mult0000_Madd12_cy<17> (round_6/mulop_3/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_3/Mmult_c_mult0000_Madd12_cy<18> (round_6/mulop_3/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_3/Mmult_c_mult0000_Madd12_cy<19> (round_6/mulop_3/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_3/Mmult_c_mult0000_Madd12_cy<20> (round_6/mulop_3/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_3/Mmult_c_mult0000_Madd12_cy<21> (round_6/mulop_3/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_6/mulop_3/Mmult_c_mult0000_Madd12_xor<22> (round_6/mulop_3/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_6/mulop_3/Mmult_c_mult0000_Madd14_lut<27> (round_6/mulop_3/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_6/mulop_3/Mmult_c_mult0000_Madd14_cy<27> (round_6/mulop_3/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_3/Mmult_c_mult0000_Madd14_cy<28> (round_6/mulop_3/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_3/Mmult_c_mult0000_Madd14_cy<29> (round_6/mulop_3/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_6/mulop_3/Mmult_c_mult0000_Madd14_xor<30> (round_6/mulop_3/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_6/mulop_3/Mmult_c_mult0000_Madd15_lut<30> (round_6/mulop_3/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_6/mulop_3/Mmult_c_mult0000_Madd15_cy<30> (round_6/mulop_3/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_6/mulop_3/Mmult_c_mult0000_Madd15_xor<31> (round_6/mulop_3/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_6/mulop_3/Mcompar_f_cmp_ge0000_lut<15> (round_6/mulop_3/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_6/mulop_3/Mcompar_f_cmp_ge0000_cy<15> (round_6/mulop_3/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_6/mulop_3/Mcompar_f_cmp_ge0000_cy<16> (round_6/mulop_3/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_6/mulop_3/f_mux0001<0>1 (round_6/mulop_3/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_6/mulop_3/Maddsub_f_mux0000_lut<0> (round_6/mulop_3/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_6/mulop_3/Maddsub_f_mux0000_cy<0> (round_6/mulop_3/Maddsub_f_mux0000_cy<0>)
+     XORCY:CI->O           2   0.804   0.482  round_6/mulop_3/Maddsub_f_mux0000_xor<1> (round_6/sm3<1>)
+     LUT3:I2->O            1   0.704   0.000  round_6/addop_3/Madd_O_lut<1> (round_6/addop_3/Madd_O_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  round_6/addop_3/Madd_O_cy<1> (round_6/addop_3/Madd_O_cy<1>)
+     XORCY:CI->O          18   0.804   1.103  round_6/addop_3/Madd_O_xor<2> (round_6/sa3<2>)
+     LUT3:I2->O            1   0.704   0.595  round_6/mulop_4/a_cmp_eq00008 (round_6/mulop_4/a_cmp_eq00008)
+     LUT4:I0->O            1   0.704   0.455  round_6/mulop_4/a_cmp_eq000024 (round_6/mulop_4/a_cmp_eq000024)
+     LUT4:I2->O           17   0.704   1.051  round_6/mulop_4/a_cmp_eq000088 (round_6/mulop_4/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_6/mulop_4/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_6/mulop_4/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_6/mulop_4/Mmult_c_mult0000_Madd2_cy<7> (round_6/mulop_4/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_6/mulop_4/Mmult_c_mult0000_Madd2_xor<8> (round_6/mulop_4/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_6/mulop_4/Mmult_c_mult0000_Madd8_lut<10> (round_6/mulop_4/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_6/mulop_4/Mmult_c_mult0000_Madd8_cy<10> (round_6/mulop_4/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_4/Mmult_c_mult0000_Madd8_cy<11> (round_6/mulop_4/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_4/Mmult_c_mult0000_Madd8_cy<12> (round_6/mulop_4/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_6/mulop_4/Mmult_c_mult0000_Madd8_xor<13> (round_6/mulop_4/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_6/mulop_4/Mmult_c_mult0000_Madd12_lut<17> (round_6/mulop_4/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_6/mulop_4/Mmult_c_mult0000_Madd12_cy<17> (round_6/mulop_4/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_4/Mmult_c_mult0000_Madd12_cy<18> (round_6/mulop_4/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_4/Mmult_c_mult0000_Madd12_cy<19> (round_6/mulop_4/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_4/Mmult_c_mult0000_Madd12_cy<20> (round_6/mulop_4/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_4/Mmult_c_mult0000_Madd12_cy<21> (round_6/mulop_4/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_6/mulop_4/Mmult_c_mult0000_Madd12_xor<22> (round_6/mulop_4/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_6/mulop_4/Mmult_c_mult0000_Madd14_lut<27> (round_6/mulop_4/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_6/mulop_4/Mmult_c_mult0000_Madd14_cy<27> (round_6/mulop_4/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_4/Mmult_c_mult0000_Madd14_cy<28> (round_6/mulop_4/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_4/Mmult_c_mult0000_Madd14_cy<29> (round_6/mulop_4/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_6/mulop_4/Mmult_c_mult0000_Madd14_xor<30> (round_6/mulop_4/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_6/mulop_4/Mmult_c_mult0000_Madd15_lut<30> (round_6/mulop_4/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_6/mulop_4/Mmult_c_mult0000_Madd15_cy<30> (round_6/mulop_4/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_6/mulop_4/Mmult_c_mult0000_Madd15_xor<31> (round_6/mulop_4/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_6/mulop_4/Mcompar_f_cmp_ge0000_lut<15> (round_6/mulop_4/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_6/mulop_4/Mcompar_f_cmp_ge0000_cy<15> (round_6/mulop_4/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_6/mulop_4/Mcompar_f_cmp_ge0000_cy<16> (round_6/mulop_4/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_6/mulop_4/f_mux0001<0>1 (round_6/mulop_4/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_6/mulop_4/Maddsub_f_mux0000_lut<0> (round_6/mulop_4/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_6/mulop_4/Maddsub_f_mux0000_cy<0> (round_6/mulop_4/Maddsub_f_mux0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_4/Maddsub_f_mux0000_cy<1> (round_6/mulop_4/Maddsub_f_mux0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_4/Maddsub_f_mux0000_cy<2> (round_6/mulop_4/Maddsub_f_mux0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_4/Maddsub_f_mux0000_cy<3> (round_6/mulop_4/Maddsub_f_mux0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_4/Maddsub_f_mux0000_cy<4> (round_6/mulop_4/Maddsub_f_mux0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_4/Maddsub_f_mux0000_cy<5> (round_6/mulop_4/Maddsub_f_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_4/Maddsub_f_mux0000_cy<6> (round_6/mulop_4/Maddsub_f_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_4/Maddsub_f_mux0000_cy<7> (round_6/mulop_4/Maddsub_f_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_4/Maddsub_f_mux0000_cy<8> (round_6/mulop_4/Maddsub_f_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_4/Maddsub_f_mux0000_cy<9> (round_6/mulop_4/Maddsub_f_mux0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_4/Maddsub_f_mux0000_cy<10> (round_6/mulop_4/Maddsub_f_mux0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_4/Maddsub_f_mux0000_cy<11> (round_6/mulop_4/Maddsub_f_mux0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_4/Maddsub_f_mux0000_cy<12> (round_6/mulop_4/Maddsub_f_mux0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  round_6/mulop_4/Maddsub_f_mux0000_cy<13> (round_6/mulop_4/Maddsub_f_mux0000_cy<13>)
+     XORCY:CI->O           4   0.804   0.762  round_6/mulop_4/Maddsub_f_mux0000_xor<14> (round_6/sm4<14>)
+     LUT2:I0->O           18   0.704   1.243  round_6/xorop_3/Mxor_O_Result<14>1 (sr6y1<14>)
+     LUT4:I0->O            1   0.704   0.499  round_7/mulop_1/a_cmp_eq000086_SW0 (N36)
+     LUT4:I1->O           17   0.704   1.051  round_7/mulop_1/a_cmp_eq000086 (round_7/mulop_1/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_7/mulop_1/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_7/mulop_1/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_7/mulop_1/Mmult_c_mult0000_Madd2_cy<7> (round_7/mulop_1/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_7/mulop_1/Mmult_c_mult0000_Madd2_xor<8> (round_7/mulop_1/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_7/mulop_1/Mmult_c_mult0000_Madd8_lut<10> (round_7/mulop_1/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_7/mulop_1/Mmult_c_mult0000_Madd8_cy<10> (round_7/mulop_1/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_1/Mmult_c_mult0000_Madd8_cy<11> (round_7/mulop_1/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_1/Mmult_c_mult0000_Madd8_cy<12> (round_7/mulop_1/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_7/mulop_1/Mmult_c_mult0000_Madd8_xor<13> (round_7/mulop_1/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_7/mulop_1/Mmult_c_mult0000_Madd12_lut<17> (round_7/mulop_1/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_7/mulop_1/Mmult_c_mult0000_Madd12_cy<17> (round_7/mulop_1/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_1/Mmult_c_mult0000_Madd12_cy<18> (round_7/mulop_1/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_1/Mmult_c_mult0000_Madd12_cy<19> (round_7/mulop_1/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_1/Mmult_c_mult0000_Madd12_cy<20> (round_7/mulop_1/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_1/Mmult_c_mult0000_Madd12_cy<21> (round_7/mulop_1/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_7/mulop_1/Mmult_c_mult0000_Madd12_xor<22> (round_7/mulop_1/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_7/mulop_1/Mmult_c_mult0000_Madd14_lut<27> (round_7/mulop_1/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_7/mulop_1/Mmult_c_mult0000_Madd14_cy<27> (round_7/mulop_1/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_1/Mmult_c_mult0000_Madd14_cy<28> (round_7/mulop_1/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_1/Mmult_c_mult0000_Madd14_cy<29> (round_7/mulop_1/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_7/mulop_1/Mmult_c_mult0000_Madd14_xor<30> (round_7/mulop_1/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_7/mulop_1/Mmult_c_mult0000_Madd15_lut<30> (round_7/mulop_1/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_7/mulop_1/Mmult_c_mult0000_Madd15_cy<30> (round_7/mulop_1/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_7/mulop_1/Mmult_c_mult0000_Madd15_xor<31> (round_7/mulop_1/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_7/mulop_1/Mcompar_f_cmp_ge0000_lut<15> (round_7/mulop_1/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_7/mulop_1/Mcompar_f_cmp_ge0000_cy<15> (round_7/mulop_1/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_7/mulop_1/Mcompar_f_cmp_ge0000_cy<16> (round_7/mulop_1/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_7/mulop_1/f_mux0001<0>1 (round_7/mulop_1/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_7/mulop_1/Maddsub_f_mux0000_lut<0> (round_7/mulop_1/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_7/mulop_1/Maddsub_f_mux0000_cy<0> (round_7/mulop_1/Maddsub_f_mux0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_1/Maddsub_f_mux0000_cy<1> (round_7/mulop_1/Maddsub_f_mux0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_1/Maddsub_f_mux0000_cy<2> (round_7/mulop_1/Maddsub_f_mux0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_1/Maddsub_f_mux0000_cy<3> (round_7/mulop_1/Maddsub_f_mux0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_1/Maddsub_f_mux0000_cy<4> (round_7/mulop_1/Maddsub_f_mux0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_1/Maddsub_f_mux0000_cy<5> (round_7/mulop_1/Maddsub_f_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_1/Maddsub_f_mux0000_cy<6> (round_7/mulop_1/Maddsub_f_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_1/Maddsub_f_mux0000_cy<7> (round_7/mulop_1/Maddsub_f_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_1/Maddsub_f_mux0000_cy<8> (round_7/mulop_1/Maddsub_f_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_1/Maddsub_f_mux0000_cy<9> (round_7/mulop_1/Maddsub_f_mux0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_1/Maddsub_f_mux0000_cy<10> (round_7/mulop_1/Maddsub_f_mux0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_1/Maddsub_f_mux0000_cy<11> (round_7/mulop_1/Maddsub_f_mux0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_1/Maddsub_f_mux0000_cy<12> (round_7/mulop_1/Maddsub_f_mux0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_1/Maddsub_f_mux0000_cy<13> (round_7/mulop_1/Maddsub_f_mux0000_cy<13>)
+     XORCY:CI->O           2   0.804   0.526  round_7/mulop_1/Maddsub_f_mux0000_xor<14> (round_7/x1z1<14>)
+     LUT2:I1->O           18   0.704   1.243  round_7/xorop_1/Mxor_O_Result<14>1 (round_7/sx1<14>)
+     LUT4:I0->O            1   0.704   0.499  round_7/mulop_3/a_cmp_eq000086_SW0 (N34)
+     LUT4:I1->O           17   0.704   1.051  round_7/mulop_3/a_cmp_eq000086 (round_7/mulop_3/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_7/mulop_3/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_7/mulop_3/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_7/mulop_3/Mmult_c_mult0000_Madd2_cy<7> (round_7/mulop_3/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_7/mulop_3/Mmult_c_mult0000_Madd2_xor<8> (round_7/mulop_3/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_7/mulop_3/Mmult_c_mult0000_Madd8_lut<10> (round_7/mulop_3/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_7/mulop_3/Mmult_c_mult0000_Madd8_cy<10> (round_7/mulop_3/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_3/Mmult_c_mult0000_Madd8_cy<11> (round_7/mulop_3/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_3/Mmult_c_mult0000_Madd8_cy<12> (round_7/mulop_3/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_7/mulop_3/Mmult_c_mult0000_Madd8_xor<13> (round_7/mulop_3/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_7/mulop_3/Mmult_c_mult0000_Madd12_lut<17> (round_7/mulop_3/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_7/mulop_3/Mmult_c_mult0000_Madd12_cy<17> (round_7/mulop_3/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_3/Mmult_c_mult0000_Madd12_cy<18> (round_7/mulop_3/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_3/Mmult_c_mult0000_Madd12_cy<19> (round_7/mulop_3/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_3/Mmult_c_mult0000_Madd12_cy<20> (round_7/mulop_3/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_3/Mmult_c_mult0000_Madd12_cy<21> (round_7/mulop_3/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_7/mulop_3/Mmult_c_mult0000_Madd12_xor<22> (round_7/mulop_3/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_7/mulop_3/Mmult_c_mult0000_Madd14_lut<27> (round_7/mulop_3/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_7/mulop_3/Mmult_c_mult0000_Madd14_cy<27> (round_7/mulop_3/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_3/Mmult_c_mult0000_Madd14_cy<28> (round_7/mulop_3/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_3/Mmult_c_mult0000_Madd14_cy<29> (round_7/mulop_3/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_7/mulop_3/Mmult_c_mult0000_Madd14_xor<30> (round_7/mulop_3/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_7/mulop_3/Mmult_c_mult0000_Madd15_lut<30> (round_7/mulop_3/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_7/mulop_3/Mmult_c_mult0000_Madd15_cy<30> (round_7/mulop_3/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_7/mulop_3/Mmult_c_mult0000_Madd15_xor<31> (round_7/mulop_3/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_7/mulop_3/Mcompar_f_cmp_ge0000_lut<15> (round_7/mulop_3/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_7/mulop_3/Mcompar_f_cmp_ge0000_cy<15> (round_7/mulop_3/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_7/mulop_3/Mcompar_f_cmp_ge0000_cy<16> (round_7/mulop_3/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_7/mulop_3/f_mux0001<0>1 (round_7/mulop_3/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_7/mulop_3/Maddsub_f_mux0000_lut<0> (round_7/mulop_3/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_7/mulop_3/Maddsub_f_mux0000_cy<0> (round_7/mulop_3/Maddsub_f_mux0000_cy<0>)
+     XORCY:CI->O           2   0.804   0.482  round_7/mulop_3/Maddsub_f_mux0000_xor<1> (round_7/sm3<1>)
+     LUT3:I2->O            1   0.704   0.000  round_7/addop_3/Madd_O_lut<1> (round_7/addop_3/Madd_O_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  round_7/addop_3/Madd_O_cy<1> (round_7/addop_3/Madd_O_cy<1>)
+     XORCY:CI->O          18   0.804   1.103  round_7/addop_3/Madd_O_xor<2> (round_7/sa3<2>)
+     LUT3:I2->O            1   0.704   0.595  round_7/mulop_4/a_cmp_eq00008 (round_7/mulop_4/a_cmp_eq00008)
+     LUT4:I0->O            1   0.704   0.455  round_7/mulop_4/a_cmp_eq000024 (round_7/mulop_4/a_cmp_eq000024)
+     LUT4:I2->O           17   0.704   1.051  round_7/mulop_4/a_cmp_eq000088 (round_7/mulop_4/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_7/mulop_4/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_7/mulop_4/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_7/mulop_4/Mmult_c_mult0000_Madd2_cy<7> (round_7/mulop_4/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_7/mulop_4/Mmult_c_mult0000_Madd2_xor<8> (round_7/mulop_4/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_7/mulop_4/Mmult_c_mult0000_Madd8_lut<10> (round_7/mulop_4/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_7/mulop_4/Mmult_c_mult0000_Madd8_cy<10> (round_7/mulop_4/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_4/Mmult_c_mult0000_Madd8_cy<11> (round_7/mulop_4/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_4/Mmult_c_mult0000_Madd8_cy<12> (round_7/mulop_4/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_7/mulop_4/Mmult_c_mult0000_Madd8_xor<13> (round_7/mulop_4/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_7/mulop_4/Mmult_c_mult0000_Madd12_lut<17> (round_7/mulop_4/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_7/mulop_4/Mmult_c_mult0000_Madd12_cy<17> (round_7/mulop_4/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_4/Mmult_c_mult0000_Madd12_cy<18> (round_7/mulop_4/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_4/Mmult_c_mult0000_Madd12_cy<19> (round_7/mulop_4/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_4/Mmult_c_mult0000_Madd12_cy<20> (round_7/mulop_4/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_4/Mmult_c_mult0000_Madd12_cy<21> (round_7/mulop_4/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_7/mulop_4/Mmult_c_mult0000_Madd12_xor<22> (round_7/mulop_4/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_7/mulop_4/Mmult_c_mult0000_Madd14_lut<27> (round_7/mulop_4/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_7/mulop_4/Mmult_c_mult0000_Madd14_cy<27> (round_7/mulop_4/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_4/Mmult_c_mult0000_Madd14_cy<28> (round_7/mulop_4/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_4/Mmult_c_mult0000_Madd14_cy<29> (round_7/mulop_4/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_7/mulop_4/Mmult_c_mult0000_Madd14_xor<30> (round_7/mulop_4/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_7/mulop_4/Mmult_c_mult0000_Madd15_lut<30> (round_7/mulop_4/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_7/mulop_4/Mmult_c_mult0000_Madd15_cy<30> (round_7/mulop_4/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_7/mulop_4/Mmult_c_mult0000_Madd15_xor<31> (round_7/mulop_4/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_7/mulop_4/Mcompar_f_cmp_ge0000_lut<15> (round_7/mulop_4/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_7/mulop_4/Mcompar_f_cmp_ge0000_cy<15> (round_7/mulop_4/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_7/mulop_4/Mcompar_f_cmp_ge0000_cy<16> (round_7/mulop_4/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_7/mulop_4/f_mux0001<0>1 (round_7/mulop_4/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_7/mulop_4/Maddsub_f_mux0000_lut<0> (round_7/mulop_4/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_7/mulop_4/Maddsub_f_mux0000_cy<0> (round_7/mulop_4/Maddsub_f_mux0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_4/Maddsub_f_mux0000_cy<1> (round_7/mulop_4/Maddsub_f_mux0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_4/Maddsub_f_mux0000_cy<2> (round_7/mulop_4/Maddsub_f_mux0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_4/Maddsub_f_mux0000_cy<3> (round_7/mulop_4/Maddsub_f_mux0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_4/Maddsub_f_mux0000_cy<4> (round_7/mulop_4/Maddsub_f_mux0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_4/Maddsub_f_mux0000_cy<5> (round_7/mulop_4/Maddsub_f_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_4/Maddsub_f_mux0000_cy<6> (round_7/mulop_4/Maddsub_f_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_4/Maddsub_f_mux0000_cy<7> (round_7/mulop_4/Maddsub_f_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_4/Maddsub_f_mux0000_cy<8> (round_7/mulop_4/Maddsub_f_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_4/Maddsub_f_mux0000_cy<9> (round_7/mulop_4/Maddsub_f_mux0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_4/Maddsub_f_mux0000_cy<10> (round_7/mulop_4/Maddsub_f_mux0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_4/Maddsub_f_mux0000_cy<11> (round_7/mulop_4/Maddsub_f_mux0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_4/Maddsub_f_mux0000_cy<12> (round_7/mulop_4/Maddsub_f_mux0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  round_7/mulop_4/Maddsub_f_mux0000_cy<13> (round_7/mulop_4/Maddsub_f_mux0000_cy<13>)
+     XORCY:CI->O           4   0.804   0.762  round_7/mulop_4/Maddsub_f_mux0000_xor<14> (round_7/sm4<14>)
+     LUT2:I0->O           18   0.704   1.243  round_7/xorop_3/Mxor_O_Result<14>1 (sr7y1<14>)
+     LUT4:I0->O            1   0.704   0.499  round_8/mulop_1/a_cmp_eq000086_SW0 (N30)
+     LUT4:I1->O           17   0.704   1.051  round_8/mulop_1/a_cmp_eq000086 (round_8/mulop_1/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_8/mulop_1/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_8/mulop_1/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_8/mulop_1/Mmult_c_mult0000_Madd2_cy<7> (round_8/mulop_1/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_8/mulop_1/Mmult_c_mult0000_Madd2_xor<8> (round_8/mulop_1/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_8/mulop_1/Mmult_c_mult0000_Madd8_lut<10> (round_8/mulop_1/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_8/mulop_1/Mmult_c_mult0000_Madd8_cy<10> (round_8/mulop_1/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_1/Mmult_c_mult0000_Madd8_cy<11> (round_8/mulop_1/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_1/Mmult_c_mult0000_Madd8_cy<12> (round_8/mulop_1/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_8/mulop_1/Mmult_c_mult0000_Madd8_xor<13> (round_8/mulop_1/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_8/mulop_1/Mmult_c_mult0000_Madd12_lut<17> (round_8/mulop_1/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_8/mulop_1/Mmult_c_mult0000_Madd12_cy<17> (round_8/mulop_1/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_1/Mmult_c_mult0000_Madd12_cy<18> (round_8/mulop_1/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_1/Mmult_c_mult0000_Madd12_cy<19> (round_8/mulop_1/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_1/Mmult_c_mult0000_Madd12_cy<20> (round_8/mulop_1/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_1/Mmult_c_mult0000_Madd12_cy<21> (round_8/mulop_1/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_8/mulop_1/Mmult_c_mult0000_Madd12_xor<22> (round_8/mulop_1/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_8/mulop_1/Mmult_c_mult0000_Madd14_lut<27> (round_8/mulop_1/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_8/mulop_1/Mmult_c_mult0000_Madd14_cy<27> (round_8/mulop_1/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_1/Mmult_c_mult0000_Madd14_cy<28> (round_8/mulop_1/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_1/Mmult_c_mult0000_Madd14_cy<29> (round_8/mulop_1/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_8/mulop_1/Mmult_c_mult0000_Madd14_xor<30> (round_8/mulop_1/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_8/mulop_1/Mmult_c_mult0000_Madd15_lut<30> (round_8/mulop_1/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_8/mulop_1/Mmult_c_mult0000_Madd15_cy<30> (round_8/mulop_1/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_8/mulop_1/Mmult_c_mult0000_Madd15_xor<31> (round_8/mulop_1/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_8/mulop_1/Mcompar_f_cmp_ge0000_lut<15> (round_8/mulop_1/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_8/mulop_1/Mcompar_f_cmp_ge0000_cy<15> (round_8/mulop_1/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_8/mulop_1/Mcompar_f_cmp_ge0000_cy<16> (round_8/mulop_1/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_8/mulop_1/f_mux0001<0>1 (round_8/mulop_1/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_8/mulop_1/Maddsub_f_mux0000_lut<0> (round_8/mulop_1/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_8/mulop_1/Maddsub_f_mux0000_cy<0> (round_8/mulop_1/Maddsub_f_mux0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_1/Maddsub_f_mux0000_cy<1> (round_8/mulop_1/Maddsub_f_mux0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_1/Maddsub_f_mux0000_cy<2> (round_8/mulop_1/Maddsub_f_mux0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_1/Maddsub_f_mux0000_cy<3> (round_8/mulop_1/Maddsub_f_mux0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_1/Maddsub_f_mux0000_cy<4> (round_8/mulop_1/Maddsub_f_mux0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_1/Maddsub_f_mux0000_cy<5> (round_8/mulop_1/Maddsub_f_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_1/Maddsub_f_mux0000_cy<6> (round_8/mulop_1/Maddsub_f_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_1/Maddsub_f_mux0000_cy<7> (round_8/mulop_1/Maddsub_f_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_1/Maddsub_f_mux0000_cy<8> (round_8/mulop_1/Maddsub_f_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_1/Maddsub_f_mux0000_cy<9> (round_8/mulop_1/Maddsub_f_mux0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_1/Maddsub_f_mux0000_cy<10> (round_8/mulop_1/Maddsub_f_mux0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_1/Maddsub_f_mux0000_cy<11> (round_8/mulop_1/Maddsub_f_mux0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_1/Maddsub_f_mux0000_cy<12> (round_8/mulop_1/Maddsub_f_mux0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_1/Maddsub_f_mux0000_cy<13> (round_8/mulop_1/Maddsub_f_mux0000_cy<13>)
+     XORCY:CI->O           2   0.804   0.526  round_8/mulop_1/Maddsub_f_mux0000_xor<14> (round_8/x1z1<14>)
+     LUT2:I1->O           18   0.704   1.243  round_8/xorop_1/Mxor_O_Result<14>1 (round_8/sx1<14>)
+     LUT4:I0->O            1   0.704   0.499  round_8/mulop_3/a_cmp_eq000086_SW0 (N28)
+     LUT4:I1->O           17   0.704   1.051  round_8/mulop_3/a_cmp_eq000086 (round_8/mulop_3/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_8/mulop_3/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_8/mulop_3/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_8/mulop_3/Mmult_c_mult0000_Madd2_cy<7> (round_8/mulop_3/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_8/mulop_3/Mmult_c_mult0000_Madd2_xor<8> (round_8/mulop_3/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_8/mulop_3/Mmult_c_mult0000_Madd8_lut<10> (round_8/mulop_3/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_8/mulop_3/Mmult_c_mult0000_Madd8_cy<10> (round_8/mulop_3/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_3/Mmult_c_mult0000_Madd8_cy<11> (round_8/mulop_3/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_3/Mmult_c_mult0000_Madd8_cy<12> (round_8/mulop_3/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_8/mulop_3/Mmult_c_mult0000_Madd8_xor<13> (round_8/mulop_3/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_8/mulop_3/Mmult_c_mult0000_Madd12_lut<17> (round_8/mulop_3/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_8/mulop_3/Mmult_c_mult0000_Madd12_cy<17> (round_8/mulop_3/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_3/Mmult_c_mult0000_Madd12_cy<18> (round_8/mulop_3/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_3/Mmult_c_mult0000_Madd12_cy<19> (round_8/mulop_3/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_3/Mmult_c_mult0000_Madd12_cy<20> (round_8/mulop_3/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_3/Mmult_c_mult0000_Madd12_cy<21> (round_8/mulop_3/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_8/mulop_3/Mmult_c_mult0000_Madd12_xor<22> (round_8/mulop_3/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_8/mulop_3/Mmult_c_mult0000_Madd14_lut<27> (round_8/mulop_3/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_8/mulop_3/Mmult_c_mult0000_Madd14_cy<27> (round_8/mulop_3/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_3/Mmult_c_mult0000_Madd14_cy<28> (round_8/mulop_3/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_3/Mmult_c_mult0000_Madd14_cy<29> (round_8/mulop_3/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_8/mulop_3/Mmult_c_mult0000_Madd14_xor<30> (round_8/mulop_3/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_8/mulop_3/Mmult_c_mult0000_Madd15_lut<30> (round_8/mulop_3/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_8/mulop_3/Mmult_c_mult0000_Madd15_cy<30> (round_8/mulop_3/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_8/mulop_3/Mmult_c_mult0000_Madd15_xor<31> (round_8/mulop_3/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_8/mulop_3/Mcompar_f_cmp_ge0000_lut<15> (round_8/mulop_3/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_8/mulop_3/Mcompar_f_cmp_ge0000_cy<15> (round_8/mulop_3/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_8/mulop_3/Mcompar_f_cmp_ge0000_cy<16> (round_8/mulop_3/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_8/mulop_3/f_mux0001<0>1 (round_8/mulop_3/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_8/mulop_3/Maddsub_f_mux0000_lut<0> (round_8/mulop_3/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_8/mulop_3/Maddsub_f_mux0000_cy<0> (round_8/mulop_3/Maddsub_f_mux0000_cy<0>)
+     XORCY:CI->O           2   0.804   0.482  round_8/mulop_3/Maddsub_f_mux0000_xor<1> (round_8/sm3<1>)
+     LUT3:I2->O            1   0.704   0.000  round_8/addop_3/Madd_O_lut<1> (round_8/addop_3/Madd_O_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  round_8/addop_3/Madd_O_cy<1> (round_8/addop_3/Madd_O_cy<1>)
+     XORCY:CI->O          18   0.804   1.103  round_8/addop_3/Madd_O_xor<2> (round_8/sa3<2>)
+     LUT3:I2->O            1   0.704   0.595  round_8/mulop_4/a_cmp_eq00008 (round_8/mulop_4/a_cmp_eq00008)
+     LUT4:I0->O            1   0.704   0.455  round_8/mulop_4/a_cmp_eq000024 (round_8/mulop_4/a_cmp_eq000024)
+     LUT4:I2->O           17   0.704   1.051  round_8/mulop_4/a_cmp_eq000088 (round_8/mulop_4/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  round_8/mulop_4/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (round_8/mulop_4/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  round_8/mulop_4/Mmult_c_mult0000_Madd2_cy<7> (round_8/mulop_4/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  round_8/mulop_4/Mmult_c_mult0000_Madd2_xor<8> (round_8/mulop_4/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  round_8/mulop_4/Mmult_c_mult0000_Madd8_lut<10> (round_8/mulop_4/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  round_8/mulop_4/Mmult_c_mult0000_Madd8_cy<10> (round_8/mulop_4/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_4/Mmult_c_mult0000_Madd8_cy<11> (round_8/mulop_4/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_4/Mmult_c_mult0000_Madd8_cy<12> (round_8/mulop_4/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  round_8/mulop_4/Mmult_c_mult0000_Madd8_xor<13> (round_8/mulop_4/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  round_8/mulop_4/Mmult_c_mult0000_Madd12_lut<17> (round_8/mulop_4/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  round_8/mulop_4/Mmult_c_mult0000_Madd12_cy<17> (round_8/mulop_4/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_4/Mmult_c_mult0000_Madd12_cy<18> (round_8/mulop_4/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_4/Mmult_c_mult0000_Madd12_cy<19> (round_8/mulop_4/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_4/Mmult_c_mult0000_Madd12_cy<20> (round_8/mulop_4/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_4/Mmult_c_mult0000_Madd12_cy<21> (round_8/mulop_4/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  round_8/mulop_4/Mmult_c_mult0000_Madd12_xor<22> (round_8/mulop_4/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  round_8/mulop_4/Mmult_c_mult0000_Madd14_lut<27> (round_8/mulop_4/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  round_8/mulop_4/Mmult_c_mult0000_Madd14_cy<27> (round_8/mulop_4/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_4/Mmult_c_mult0000_Madd14_cy<28> (round_8/mulop_4/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  round_8/mulop_4/Mmult_c_mult0000_Madd14_cy<29> (round_8/mulop_4/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  round_8/mulop_4/Mmult_c_mult0000_Madd14_xor<30> (round_8/mulop_4/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  round_8/mulop_4/Mmult_c_mult0000_Madd15_lut<30> (round_8/mulop_4/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  round_8/mulop_4/Mmult_c_mult0000_Madd15_cy<30> (round_8/mulop_4/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  round_8/mulop_4/Mmult_c_mult0000_Madd15_xor<31> (round_8/mulop_4/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  round_8/mulop_4/Mcompar_f_cmp_ge0000_lut<15> (round_8/mulop_4/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  round_8/mulop_4/Mcompar_f_cmp_ge0000_cy<15> (round_8/mulop_4/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  round_8/mulop_4/Mcompar_f_cmp_ge0000_cy<16> (round_8/mulop_4/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  round_8/mulop_4/f_mux0001<0>1 (round_8/mulop_4/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  round_8/mulop_4/Maddsub_f_mux0000_lut<0> (round_8/mulop_4/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  round_8/mulop_4/Maddsub_f_mux0000_cy<0> (round_8/mulop_4/Maddsub_f_mux0000_cy<0>)
+     XORCY:CI->O           5   0.804   0.808  round_8/mulop_4/Maddsub_f_mux0000_xor<1> (round_8/sm4<1>)
+     LUT2:I0->O            1   0.704   0.000  round_8/addop_4/Madd_O_lut<1> (round_8/addop_4/Madd_O_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  round_8/addop_4/Madd_O_cy<1> (round_8/addop_4/Madd_O_cy<1>)
+     XORCY:CI->O           3   0.804   0.706  round_8/addop_4/Madd_O_xor<2> (round_8/sa4<2>)
+     LUT2:I0->O           18   0.704   1.072  round_8/xorop_6/Mxor_O_Result<2>1 (sr8y4<2>)
+     LUT4:I3->O            1   0.704   0.595  trafo_1/mulop_2/a_cmp_eq00008 (trafo_1/mulop_2/a_cmp_eq00008)
+     LUT4:I0->O            1   0.704   0.499  trafo_1/mulop_2/a_cmp_eq000024 (trafo_1/mulop_2/a_cmp_eq000024)
+     LUT4:I1->O            1   0.704   0.424  trafo_1/mulop_2/a_cmp_eq000088_SW0 (N20)
+     LUT4:I3->O           17   0.704   1.051  trafo_1/mulop_2/a_cmp_eq000088 (trafo_1/mulop_2/a_cmp_eq0000)
+     MULT_AND:I0->LO       0   0.741   0.000  trafo_1/mulop_2/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand (trafo_1/mulop_2/Mmult_c_mult0000_a_cmp_eq0000_x_b_mux0000<2>_mand1)
+     MUXCY:DI->O           1   0.888   0.000  trafo_1/mulop_2/Mmult_c_mult0000_Madd2_cy<7> (trafo_1/mulop_2/Mmult_c_mult0000_Madd2_cy<7>)
+     XORCY:CI->O           1   0.804   0.595  trafo_1/mulop_2/Mmult_c_mult0000_Madd2_xor<8> (trafo_1/mulop_2/Mmult_c_mult0000_Madd_192)
+     LUT2:I0->O            1   0.704   0.000  trafo_1/mulop_2/Mmult_c_mult0000_Madd8_lut<10> (trafo_1/mulop_2/Mmult_c_mult0000_Madd8_lut<10>)
+     MUXCY:S->O            1   0.464   0.000  trafo_1/mulop_2/Mmult_c_mult0000_Madd8_cy<10> (trafo_1/mulop_2/Mmult_c_mult0000_Madd8_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  trafo_1/mulop_2/Mmult_c_mult0000_Madd8_cy<11> (trafo_1/mulop_2/Mmult_c_mult0000_Madd8_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  trafo_1/mulop_2/Mmult_c_mult0000_Madd8_cy<12> (trafo_1/mulop_2/Mmult_c_mult0000_Madd8_cy<12>)
+     XORCY:CI->O           1   0.804   0.595  trafo_1/mulop_2/Mmult_c_mult0000_Madd8_xor<13> (trafo_1/mulop_2/Mmult_c_mult0000_Madd_229)
+     LUT2:I0->O            1   0.704   0.000  trafo_1/mulop_2/Mmult_c_mult0000_Madd12_lut<17> (trafo_1/mulop_2/Mmult_c_mult0000_Madd12_lut<17>)
+     MUXCY:S->O            1   0.464   0.000  trafo_1/mulop_2/Mmult_c_mult0000_Madd12_cy<17> (trafo_1/mulop_2/Mmult_c_mult0000_Madd12_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  trafo_1/mulop_2/Mmult_c_mult0000_Madd12_cy<18> (trafo_1/mulop_2/Mmult_c_mult0000_Madd12_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  trafo_1/mulop_2/Mmult_c_mult0000_Madd12_cy<19> (trafo_1/mulop_2/Mmult_c_mult0000_Madd12_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  trafo_1/mulop_2/Mmult_c_mult0000_Madd12_cy<20> (trafo_1/mulop_2/Mmult_c_mult0000_Madd12_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  trafo_1/mulop_2/Mmult_c_mult0000_Madd12_cy<21> (trafo_1/mulop_2/Mmult_c_mult0000_Madd12_cy<21>)
+     XORCY:CI->O           1   0.804   0.595  trafo_1/mulop_2/Mmult_c_mult0000_Madd12_xor<22> (trafo_1/mulop_2/Mmult_c_mult0000_Madd_278)
+     LUT2:I0->O            1   0.704   0.000  trafo_1/mulop_2/Mmult_c_mult0000_Madd14_lut<27> (trafo_1/mulop_2/Mmult_c_mult0000_Madd14_lut<27>)
+     MUXCY:S->O            1   0.464   0.000  trafo_1/mulop_2/Mmult_c_mult0000_Madd14_cy<27> (trafo_1/mulop_2/Mmult_c_mult0000_Madd14_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  trafo_1/mulop_2/Mmult_c_mult0000_Madd14_cy<28> (trafo_1/mulop_2/Mmult_c_mult0000_Madd14_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  trafo_1/mulop_2/Mmult_c_mult0000_Madd14_cy<29> (trafo_1/mulop_2/Mmult_c_mult0000_Madd14_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  trafo_1/mulop_2/Mmult_c_mult0000_Madd14_xor<30> (trafo_1/mulop_2/Mmult_c_mult0000_Madd_306)
+     LUT3:I1->O            1   0.704   0.000  trafo_1/mulop_2/Mmult_c_mult0000_Madd15_lut<30> (trafo_1/mulop_2/Mmult_c_mult0000_Madd15_lut<30>)
+     MUXCY:S->O            1   0.464   0.000  trafo_1/mulop_2/Mmult_c_mult0000_Madd15_cy<30> (trafo_1/mulop_2/Mmult_c_mult0000_Madd15_cy<30>)
+     XORCY:CI->O           3   0.804   0.610  trafo_1/mulop_2/Mmult_c_mult0000_Madd15_xor<31> (trafo_1/mulop_2/c_mult0000<31>)
+     LUT2:I1->O            1   0.704   0.000  trafo_1/mulop_2/Mcompar_f_cmp_ge0000_lut<15> (trafo_1/mulop_2/Mcompar_f_cmp_ge0000_lut<15>)
+     MUXCY:S->O            1   0.464   0.000  trafo_1/mulop_2/Mcompar_f_cmp_ge0000_cy<15> (trafo_1/mulop_2/Mcompar_f_cmp_ge0000_cy<15>)
+     MUXCY:CI->O          32   0.059   1.437  trafo_1/mulop_2/Mcompar_f_cmp_ge0000_cy<16> (trafo_1/mulop_2/f_cmp_ge0000)
+     LUT4:I0->O            1   0.704   0.499  trafo_1/mulop_2/f_mux0001<0>1 (trafo_1/mulop_2/f_mux0001<0>)
+     LUT3:I1->O            1   0.704   0.000  trafo_1/mulop_2/Maddsub_f_mux0000_lut<0> (trafo_1/mulop_2/Maddsub_f_mux0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  trafo_1/mulop_2/Maddsub_f_mux0000_cy<0> (trafo_1/mulop_2/Maddsub_f_mux0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  trafo_1/mulop_2/Maddsub_f_mux0000_cy<1> (trafo_1/mulop_2/Maddsub_f_mux0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  trafo_1/mulop_2/Maddsub_f_mux0000_cy<2> (trafo_1/mulop_2/Maddsub_f_mux0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  trafo_1/mulop_2/Maddsub_f_mux0000_cy<3> (trafo_1/mulop_2/Maddsub_f_mux0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  trafo_1/mulop_2/Maddsub_f_mux0000_cy<4> (trafo_1/mulop_2/Maddsub_f_mux0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  trafo_1/mulop_2/Maddsub_f_mux0000_cy<5> (trafo_1/mulop_2/Maddsub_f_mux0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  trafo_1/mulop_2/Maddsub_f_mux0000_cy<6> (trafo_1/mulop_2/Maddsub_f_mux0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  trafo_1/mulop_2/Maddsub_f_mux0000_cy<7> (trafo_1/mulop_2/Maddsub_f_mux0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  trafo_1/mulop_2/Maddsub_f_mux0000_cy<8> (trafo_1/mulop_2/Maddsub_f_mux0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  trafo_1/mulop_2/Maddsub_f_mux0000_cy<9> (trafo_1/mulop_2/Maddsub_f_mux0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  trafo_1/mulop_2/Maddsub_f_mux0000_cy<10> (trafo_1/mulop_2/Maddsub_f_mux0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  trafo_1/mulop_2/Maddsub_f_mux0000_cy<11> (trafo_1/mulop_2/Maddsub_f_mux0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  trafo_1/mulop_2/Maddsub_f_mux0000_cy<12> (trafo_1/mulop_2/Maddsub_f_mux0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  trafo_1/mulop_2/Maddsub_f_mux0000_cy<13> (trafo_1/mulop_2/Maddsub_f_mux0000_cy<13>)
+     MUXCY:CI->O           0   0.059   0.000  trafo_1/mulop_2/Maddsub_f_mux0000_cy<14> (trafo_1/mulop_2/Maddsub_f_mux0000_cy<14>)
+     XORCY:CI->O           1   0.804   0.420  trafo_1/mulop_2/Maddsub_f_mux0000_xor<15> (Y4_15_OBUF)
+     OBUF:I->O                 3.272          Y4_15_OBUF (Y4<15>)
+    ----------------------------------------
+    Total                    665.650ns (455.472ns logic, 210.178ns route)
+                                       (68.4% logic, 31.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 31.00 secs
+Total CPU time to Xst completion: 29.31 secs
+ 
+--> 
+
+
+Total memory usage is 715304 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

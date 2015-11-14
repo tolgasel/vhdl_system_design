@@ -1,0 +1,12 @@
+EN idea NULL /home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/idea.vhd sub00/vhpl10 1446648141
+AR addop behavioral /home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/addop.vhd sub00/vhpl03 1446648172
+EN mulop NULL /home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/mulop.vhd sub00/vhpl00 1446648169
+EN trafo NULL /home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/trafo.vhd sub00/vhpl06 1446648137
+AR round behavioral /home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/round.vhd sub00/vhpl09 1446648176
+EN addop NULL /home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/addop.vhd sub00/vhpl02 1446648171
+AR trafo behavioral /home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/trafo.vhd sub00/vhpl07 1446648138
+AR idea behavioral /home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/idea.vhd sub00/vhpl11 1446648142
+EN round NULL /home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/round.vhd sub00/vhpl08 1446648175
+EN xorop NULL /home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/xorop.vhd sub00/vhpl04 1446648173
+AR mulop behavioral /home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/mulop.vhd sub00/vhpl01 1446648170
+AR xorop behavioral /home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation_abgabe/direct_implementation/xorop.vhd sub00/vhpl05 1446648174

@@ -1,0 +1,106 @@
+ISim log file
+Running: /home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation/tb_idea_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation/tb_idea_isim_beh.wdb 
+INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
+ISim P.20131013 (signature 0xfbc00daa)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_idea/uut/trafo_1/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/trafo_1/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_1/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_1/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_1/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_1/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_2/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_2/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_2/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_2/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_3/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_3/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_3/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_3/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_4/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_4/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_4/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_4/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_5/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_5/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_5/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_5/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_6/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_6/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_6/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_6/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_7/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_7/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_7/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_7/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_8/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_8/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_8/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_8/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_idea/uut/round_1/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_1/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_2/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_2/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_3/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_4/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_5/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_6/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_7/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_8/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_2/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_2/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_2/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_3/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_3/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_1/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_2/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_3/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_4/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_4/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_4/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_5/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_5/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_5/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_6/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_6/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_6/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_7/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_7/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_7/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_8/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_8/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_8/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/trafo_1/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/trafo_1/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_3/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_3/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_4/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_4/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_4/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_4/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_5/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_5/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_5/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_5/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_6/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_6/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_6/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_6/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_7/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_7/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_7/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_7/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_8/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_8/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_8/mulop_3/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/round_8/mulop_4/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/trafo_1/mulop_1/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+at 0 ps, Instance /tb_idea/uut/trafo_1/mulop_2/ : Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+# exit 0
+# exit 0

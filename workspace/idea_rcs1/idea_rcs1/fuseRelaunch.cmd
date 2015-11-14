@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/superus/Vhdl_System_Design_WiSe1516/workspace/idea_rcs1/idea_rcs1/tb_reg_sync_isim_beh.exe" -prj "/home/superus/Vhdl_System_Design_WiSe1516/workspace/idea_rcs1/idea_rcs1/tb_reg_sync_beh.prj" "work.tb_reg_sync" 
