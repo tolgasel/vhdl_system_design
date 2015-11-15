@@ -8,7 +8,19 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/superus/vhdl_system_design/workspace/Exercise1/direct_implementation/xorop.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/tb_keygen.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/tb_keygen.vhd</arg>&quot; Line <arg fmt="%d" index="2">60</arg>. <arg fmt="%s" index="3">Syntax error near &quot;&lt;&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/tb_keygen.vhd</arg>&quot; Line <arg fmt="%d" index="2">72</arg>. <arg fmt="%s" index="3">Syntax error near &quot;&lt;&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/tb_keygen.vhd</arg>&quot; Line <arg fmt="%d" index="2">74</arg>. <arg fmt="%s" index="3">Syntax error near &quot;&lt;&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/tb_keygen.vhd</arg>&quot; Line <arg fmt="%d" index="2">87</arg>. <arg fmt="%s" index="3">Syntax error near &quot;&lt;&quot;.</arg>
 </msg>
 
 </messages>
