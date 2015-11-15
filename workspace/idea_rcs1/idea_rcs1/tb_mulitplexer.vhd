@@ -2,15 +2,15 @@
 -- Company: 
 -- Engineer: Tolga Sel 
 -- 
--- Create Date:   09:51:37 11/03/2015
+-- Create Date:   17:13:00 11/14/2015
 -- Design Name:   
--- Module Name:   /home/ga69kaw/vhdl_system_design_lab/workspace/Exercise1/direct_implementation/tb_mulop.vhd
--- Project Name:  direct_implementation
+-- Module Name:   /home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/tb_mulitplexer.vhd
+-- Project Name:  idea_rcs1
 -- Target Device:  
 -- Tool versions:  
 -- Description:   
 -- 
--- VHDL Test Bench Created by ISE for module: mulop
+-- VHDL Test Bench Created by ISE for module: multiplexer
 -- 
 -- Dependencies:
 -- 
@@ -32,42 +32,48 @@ USE ieee.std_logic_1164.ALL;
 -- arithmetic functions with Signed or Unsigned values
 --USE ieee.numeric_std.ALL;
  
-ENTITY tb_mulop IS
-END tb_mulop;
+ENTITY tb_mulitplexer IS
+END tb_mulitplexer;
  
-ARCHITECTURE behavior OF tb_mulop IS 
+ARCHITECTURE behavior OF tb_mulitplexer IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT mulop
+    COMPONENT multiplexer
     PORT(
-         X : IN  std_logic_vector(15 downto 0);
-         Y : IN  std_logic_vector(15 downto 0);
-         O : OUT  std_logic_vector(15 downto 0)
+         A : IN  std_logic_vector(15 downto 0);
+         B : IN  std_logic_vector(15 downto 0);
+         O : OUT  std_logic_vector(15 downto 0);
+         s : IN  std_logic
         );
     END COMPONENT;
     
 
    --Inputs
-   signal X : std_logic_vector(15 downto 0) := (others => '0');
-   signal Y : std_logic_vector(15 downto 0) := (others => '0');
+   signal A : std_logic_vector(15 downto 0) := (others => '0');
+   signal B : std_logic_vector(15 downto 0) := (others => '0');
+   signal s : std_logic := '0';
 
  	--Outputs
    signal O : std_logic_vector(15 downto 0);
    -- No clocks detected in port list. Replace <clock> below with 
    -- appropriate port name 
  
+
  
 BEGIN
  
-	-- Instantiate the Unit Under Test (UUT) (43241*63743) mod (65537)
-   uut: mulop PORT MAP (
-          X => X,
-          Y => Y,
-          O => O
+	-- Instantiate the Unit Under Test (UUT)
+   uut: multiplexer PORT MAP (
+          A => A,
+          B => B,
+          O => O,
+          s => s
         );
 
-X <= "0000000000000000", "1000000000000000" after 200ns, "1111111111111111" after 400ns, "1010100011101001" after 800ns;
-Y <= "0000000000000000", "1000000000000000" after 200ns, "1111111111111111" after 400ns, "1111100011111111" after 800ns;
+A <= "0000111100001111", "1111111011111110" after 20 ns, "1100001011111110" after 40 ns, "1100001011111110" after 50 ns;
+B <= "0000001000000000", "0001001000000000" after 20 ns, "0010010000001100" after 40 ns, "1100001011111110" after 50 ns;
+s <= '0', '1' after 2 ns, '0' after 4 ns, '1' after 19 ns, '0' after 22 ns; 
 
-end   behavior;
+
+END;

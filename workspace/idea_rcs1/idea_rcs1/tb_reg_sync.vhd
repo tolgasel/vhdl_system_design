@@ -1,7 +1,7 @@
---------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
 -- Company: 
--- Engineer:
---
+-- Engineer: Tolga Sel 
+-- 
 -- Create Date:   16:31:10 11/14/2015
 -- Design Name:   
 -- Module Name:   /home/superus/Vhdl_System_Design_WiSe1516/workspace/idea_rcs1/idea_rcs1/tb_reg_sync.vhd

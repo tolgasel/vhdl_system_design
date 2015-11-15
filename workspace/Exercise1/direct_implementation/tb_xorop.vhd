@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: ga69kaw, Tolga Sel 
+-- Engineer: Tolga Sel 
 -- 
 -- Create Date:   12:48:57 11/02/2015
 -- Design Name:   

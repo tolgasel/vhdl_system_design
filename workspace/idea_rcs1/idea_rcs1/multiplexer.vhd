@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: Tolga Sel 
 -- 
--- Create Date:    13:10:39 11/02/2015 
+-- Create Date:    17:06:16 11/14/2015 
 -- Design Name: 
--- Module Name:    addop - Behavioral 
+-- Module Name:    multiplexer - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -19,7 +19,7 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
+
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
@@ -29,19 +29,26 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity addop is
+entity multiplexer is
     Port ( A : in  STD_LOGIC_VECTOR(15 downto 0);
            B : in  STD_LOGIC_VECTOR(15 downto 0);
-           O : out  STD_LOGIC_VECTOR(15 downto 0));
-end addop;
+           O : out  STD_LOGIC_VECTOR(15 downto 0);
+           s : in	 STD_LOGIC);
+end multiplexer;
 
-architecture Behavioral of addop is
+architecture Behavioral of multiplexer is
 
 begin
 
-modulo_adder: process(A,B)
+multiplex_proc : process(A,B,s)
 	begin
-		O <= std_logic_vector(unsigned(A) + unsigned(B));
-		end process modulo_adder;
-		
+	case s is
+		when '1' => O <= A;
+		when '0' => O <= B;
+		when others => O <= "XXXXXXXXXXXXXXXX";
+	end case;
+end process multiplex_proc;
+
+
 end Behavioral;
+
