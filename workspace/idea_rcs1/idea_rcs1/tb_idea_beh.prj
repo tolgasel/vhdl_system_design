@@ -1,0 +1,7 @@
+vhdl work "../../Exercise1/direct_implementation/xorop.vhd"
+vhdl work "../../Exercise1/direct_implementation/mulop.vhd"
+vhdl work "../../Exercise1/direct_implementation/addop.vhd"
+vhdl work "../../Exercise1/direct_implementation/trafo.vhd"
+vhdl work "../../Exercise1/direct_implementation/round.vhd"
+vhdl work "../../Exercise1/direct_implementation/idea.vhd"
+vhdl work "../../Exercise1/direct_implementation/tb_idea.vhd"

@@ -1,0 +1,7 @@
+vhdl isim_temp "../../Exercise1/direct_implementation/xorop.vhd"
+vhdl isim_temp "../../Exercise1/direct_implementation/mulop.vhd"
+vhdl isim_temp "../../Exercise1/direct_implementation/addop.vhd"
+vhdl isim_temp "../../Exercise1/direct_implementation/trafo.vhd"
+vhdl isim_temp "../../Exercise1/direct_implementation/round.vhd"
+vhdl isim_temp "../../Exercise1/direct_implementation/idea.vhd"
+vhdl isim_temp "../../Exercise1/direct_implementation/tb_idea.vhd"

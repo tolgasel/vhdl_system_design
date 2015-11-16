@@ -1,22 +1,25 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -o "/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/tb_mulitplexer_isim_beh.exe" -prj "/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/tb_mulitplexer_beh.prj" "work.tb_mulitplexer" 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -o "/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/tb_control_isim_beh.exe" -prj "/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/tb_control_beh.prj" "work.tb_control" 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 2
 Turning on mult-threading, number of parallel sub-compilation jobs: 4 
 Determining compilation order of HDL files
-Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/multiplexer.vhd" into library work
-Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/tb_mulitplexer.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/control.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/tb_control.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 95064 KB
-Fuse CPU Usage: 2900 ms
+Fuse Memory Usage: 98136 KB
+Fuse CPU Usage: 2920 ms
 Compiling package standard
 Compiling package std_logic_1164
-Compiling architecture behavioral of entity multiplexer [multiplexer_default]
-Compiling architecture behavior of entity tb_mulitplexer
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling architecture behavioral of entity control [control_default]
+Compiling architecture behavior of entity tb_control
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 5 VHDL Units
-Built simulation executable /home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/tb_mulitplexer_isim_beh.exe
-Fuse Memory Usage: 398628 KB
-Fuse CPU Usage: 2950 ms
-GCC CPU Usage: 350 ms
+Waiting for 2 sub-compilation(s) to finish...
+Compiled 8 VHDL Units
+Built simulation executable /home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/tb_control_isim_beh.exe
+Fuse Memory Usage: 411872 KB
+Fuse CPU Usage: 3220 ms
+GCC CPU Usage: 470 ms
