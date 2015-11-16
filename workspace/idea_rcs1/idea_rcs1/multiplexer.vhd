@@ -43,8 +43,8 @@ begin
 multiplex_proc : process(A,B,s)
 	begin
 	case s is
-		when '1' => O <= A;
-		when '0' => O <= B;
+		when '0' => O <= A;
+		when '1' => O <= B;
 		when others => O <= "XXXXXXXXXXXXXXXX";
 	end case;
 end process multiplex_proc;

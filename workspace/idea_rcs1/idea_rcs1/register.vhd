@@ -29,14 +29,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity reg_sync is
+entity register_16bit is
     Port ( D : in  STD_LOGIC_VECTOR(15 downto 0);
            Q : out  STD_LOGIC_VECTOR(15 downto 0);
            en : in STD_LOGIC;
 			  clk : in STD_LOGIC);
-end reg_sync;
+end register_16bit;
 
-architecture Behavioral of reg_sync is
+architecture Behavioral of register_16bit is
 
 begin
 
