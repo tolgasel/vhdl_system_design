@@ -124,10 +124,6 @@ architecture Behavioral of idea_single is
         );
     END COMPONENT;
 
-	signal round_in_x1	: std_logic_vector(15 downto 0) := (others => '0');
-	signal round_in_x2	: std_logic_vector(15 downto 0) := (others => '0');
-	signal round_in_x3	: std_logic_vector(15 downto 0) := (others => '0');
-	signal round_in_x4	: std_logic_vector(15 downto 0) := (others => '0');
 
 	signal round_out_y1	: std_logic_vector(15 downto 0) := (others => '0');
 	signal round_out_y2	: std_logic_vector(15 downto 0) := (others => '0');

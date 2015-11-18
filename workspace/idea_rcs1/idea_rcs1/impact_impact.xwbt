@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/impact.xsl
+OUTFILE=/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1
+LICENSE=iMPACT
+USER_INFO=iMPACT

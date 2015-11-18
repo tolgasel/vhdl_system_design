@@ -75,7 +75,7 @@ control_proc: process(clk, start)
 			if(round_sig = "0000") then s_var := '1';
 			end if;
 			counter_var := counter_var + 1;
-			if(round_sig = "1000") then 
+			if(round_sig = "0111") then 
 				fsm_start_sig <= '0';
 				ready_var	:= '1';
 				en_var		:=	'0';

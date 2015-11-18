@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/tb_addop.xst" -ofn "/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/tb_addop.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc idea_hw.ucf -p xc3s500e-fg320-4 tb_addop.ngc tb_addop.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc idea_hw.ucf -p xc3s500e-fg320-4 tb_addop.ngc tb_addop.ngd  

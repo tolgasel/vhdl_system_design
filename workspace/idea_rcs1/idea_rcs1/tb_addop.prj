@@ -1,0 +1,2 @@
+vhdl work "../../Exercise1/direct_implementation/addop.vhd"
+vhdl work "../../Exercise1/direct_implementation/tb_addop.vhd"

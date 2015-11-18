@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/tb_idea_single_isim_beh.exe" -prj "/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/tb_idea_single_beh.prj" "work.tb_idea_single" 
+-intstyle "ise" -incremental -o "/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/idea_com_isim_beh.exe" -prj "/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/idea_com_beh.prj" "work.idea_com" 
