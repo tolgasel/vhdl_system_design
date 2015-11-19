@@ -73,7 +73,7 @@ BEGIN
 
 A <= "0000111100001111", "1111111011111110" after 20 ns, "1100001011111110" after 40 ns, "1100001011111110" after 50 ns;
 B <= "0000001000000000", "0001001000000000" after 20 ns, "0010010000001100" after 40 ns, "1100001011111110" after 50 ns;
-s <= '0', '1' after 2 ns, '0' after 4 ns, '1' after 19 ns, '0' after 22 ns; 
-
+--s <= '0', '1' after 2 ns, '0' after 4 ns, '1' after 19 ns, '0' after 22 ns; 
+s <= 'X';
 
 END;

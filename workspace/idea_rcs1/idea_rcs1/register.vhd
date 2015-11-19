@@ -38,13 +38,19 @@ end register_16bit;
 
 architecture Behavioral of register_16bit is
 
+	signal q_sig : STD_LOGIC_VECTOR(15 downto 0) := (others => '0');
+
+
 begin
+
+Q <= q_sig;
+
 
 proc_reg : process (clk)
 	begin
 		if(clk = '1' and clk'event) then
 			if en = '1' then
-			Q <= D;
+			q_sig <= D;
 			end if;
 		end if;
 end process proc_reg;

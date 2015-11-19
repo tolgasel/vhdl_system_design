@@ -1,2 +1,0 @@
-vhdl isim_temp "register.vhd"
-vhdl isim_temp "tb_reg_sync.vhd"

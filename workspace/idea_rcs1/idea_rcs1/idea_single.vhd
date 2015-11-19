@@ -48,7 +48,7 @@ architecture Behavioral of idea_single is
 
     COMPONENT keygen
     PORT(
-         rc : IN  std_logic_vector(3 downto 0);
+         rc : IN  std_logic_vector(3 downto 0) ;
          key_in : IN  std_logic_vector(127 downto 0);
          z1 : OUT  std_logic_vector(15 downto 0);
          z2 : OUT  std_logic_vector(15 downto 0);
@@ -155,8 +155,18 @@ architecture Behavioral of idea_single is
 	signal mux_4_out		: std_logic_vector(15 downto 0) := (others => '0');
 	
 
+	signal y1_sig		: std_logic_vector(15 downto 0) := (others => '0');
+	signal y2_sig		: std_logic_vector(15 downto 0) := (others => '0');
+	signal y3_sig		: std_logic_vector(15 downto 0) := (others => '0');
+	signal y4_sig		: std_logic_vector(15 downto 0) := (others => '0');
 	
 begin
+
+
+          Y1 <= y1_sig;
+          Y2 <= y2_sig;
+          Y3 <= y3_sig;
+          Y4 <= y4_sig;
 
    register_1: register_16bit PORT MAP (
           D => round_out_y1,
@@ -205,10 +215,10 @@ begin
           Z2 => key_2_sig,
           Z3 => key_3_sig,
           Z4 => key_4_sig,
-          Y1 => Y1,
-          Y2 => Y2,
-          Y3 => Y3,
-          Y4 => Y4
+          Y1 => y1_sig,
+          Y2 => y2_sig,
+          Y3 => y3_sig,
+          Y4 => y4_sig
         );
 		  
 		  

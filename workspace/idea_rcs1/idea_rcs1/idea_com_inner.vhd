@@ -125,6 +125,9 @@ signal byte_cntr : std_logic_vector(4 downto 0) := "00000";
 signal loopback_select : std_logic := '0';
 signal z1, z2, z3, z4 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
 
+signal led_count_sig : std_logic_vector(7 downto 0) := "00000000";
+signal counter_sig	: std_logic_vector(18 downto 0) := (others => '0');
+
 begin	
 	-- The UART module
 	uart1:   uart port map( Clk, Reset,
@@ -181,7 +184,7 @@ begin
 				byte_cntr <= "00000";
 				read <= '1';
 				write <= '1';
-				LEDs <= "01000001"; --LEDs <= "00000000"; hier ändern in original
+				--LEDs <= "00000000";
 			else
 				if ( state = IDLE ) then
 					-- Initial state
@@ -198,15 +201,15 @@ begin
 					-- The UART signalizes, that there
 					-- is a new byte to be read!
 					read <= '0';
-					LEDs(3) <= '0';
+					--LEDs(3) <= '0';
 					state <= READ_BYTE;
 				elsif ( state = READ_BYTE ) then
 					-- Read the byte and set the
 					-- right input registers of the
 					-- IDEA block.
-					LEDs(0) <= framing_error;
-					LEDs(1) <= parity_error;
-					LEDs(2) <= overrun;
+					--LEDs(0) <= framing_error;
+					--LEDs(1) <= parity_error;
+					--LEDs(2) <= overrun;
 					byte_cntr <= byte_cntr+"00001";
 					if ( byte_cntr = "00000" ) then
 						x1(7 downto 0) <= data;
@@ -255,7 +258,8 @@ begin
 					elsif ( byte_cntr = "10110" ) then
 						key(119 downto 112) <= data;
 					elsif ( byte_cntr = "10111" ) then
-						key(127 downto 120) <= data;									
+						key(127 downto 120) <= data;	
+							
 					end if;
 					read <= '1';
 					state <= WAIT_FOR_RXRDY_0;
@@ -292,10 +296,10 @@ begin
 					-- The IDEA algorithm has computed its results now.
 					byte_cntr <= "00000";
 					start_idea <= '0';
-					if ( ready_idea = '1' ) then			
+					if ( ready_idea = '1' ) then	
 						state <= WRITE_BYTE;
 					end if;
-				elsif ( state = WRITE_BYTE ) then					
+				elsif ( state = WRITE_BYTE ) then
 					-- Write back the computed data set
 					byte_cntr <= byte_cntr + "00001";
 					if ( byte_cntr = "00000" ) then
@@ -330,7 +334,6 @@ begin
 						if ( byte_cntr = "01000" ) then
 							state <= WAIT_FOR_DATA;
 							byte_cntr <= "00000";
-							LEDs(3) <= '1';
 						else
 							state <= WRITE_BYTE;
 						end if;
@@ -339,6 +342,24 @@ begin
 			end if;
 		end if;
 	end process;
+
+	LEDs_proc :	process ( Clk )
+	begin
+		if ( Clk'event and Clk='1' ) then
+			if(counter_sig = "1001011000000000000") then
+				counter_sig <= "0000000000000000000";
+				if(led_count_sig = "11111111") then
+				led_count_sig <= "00000000";
+				else
+				LEDs <= led_count_sig;
+				led_count_sig <= led_count_sig +1;
+				end if;
+			else
+				counter_sig <= counter_sig +1;
+			end if;
+		end if;
+	end process LEDs_proc;
+				
 	
 end Behavioral;
 

@@ -36,26 +36,26 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f1000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f10000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>keygen.vhd</SelectedItem>
+         <SelectedItem>control.vhd</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000018a000000040101000100000000000000000000000064ffffffff000000810000000000000004000000850000000100000000000000280000000100000000000000790000000100000000000000640000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000027b000000040101000100000000000000000000000064ffffffff000000810000000000000004000000850000000100000000000000280000000100000000000000790000000100000000000001550000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>keygen.vhd</CurrentItem>
+      <CurrentItem>control.vhd</CurrentItem>
    </ItemView>
    <ItemView guiview="Library" >
       <ClosedNodes>
@@ -64,7 +64,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000115000000010001000100000000000000000000000064ffffffff000000810000000000000001000001150000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000119000000010001000100000000000000000000000064ffffffff000000810000000000000001000001190000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>work</CurrentItem>
    </ItemView>
@@ -81,9 +81,9 @@
       <SelectedItems>
          <SelectedItem>Generate Programming File</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >4</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e1000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e10000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e5000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e50000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Generate Programming File</CurrentItem>
    </ItemView>
@@ -106,8 +106,9 @@
          <ClosedNode>/tb_idea - behavior |home|superus|vhdl_system_design|workspace|Exercise1|direct_implementation|tb_idea.vhd/uut - idea - Behavioral/round_7 - round - Behavioral</ClosedNode>
          <ClosedNode>/tb_idea - behavior |home|superus|vhdl_system_design|workspace|Exercise1|direct_implementation|tb_idea.vhd/uut - idea - Behavioral/round_8 - round - Behavioral</ClosedNode>
          <ClosedNode>/tb_idea - behavior |home|superus|vhdl_system_design|workspace|Exercise1|direct_implementation|tb_idea.vhd/uut - idea - Behavioral/trafo_1 - trafo - Behavioral</ClosedNode>
+         <ClosedNode>/tb_idea_com - behavior |home|superus|vhdl_system_design|workspace|idea_rcs1|idea_rcs1|tb_idea_com.vhd</ClosedNode>
          <ClosedNode>/tb_idea_com - behavior |home|superus|vhdl_system_design|workspace|idea_rcs1|idea_rcs1|tb_idea_com.vhd/uut - idea_com - Behavioral/idea_1 - idea_com_inner - Behavioral</ClosedNode>
-         <ClosedNode>/tb_idea_single - behavior |home|superus|vhdl_system_design|workspace|idea_rcs1|idea_rcs1|tb_idea_single.vhd</ClosedNode>
+         <ClosedNode>/tb_idea_single - behavior |home|superus|vhdl_system_design|workspace|idea_rcs1|idea_rcs1|tb_idea_single.vhd/uut - idea_single - Behavioral</ClosedNode>
          <ClosedNode>/tb_idea_single - behavior |home|superus|vhdl_system_design|workspace|idea_rcs1|idea_rcs1|tb_idea_single.vhd/uut - idea_single - Behavioral/round_module - round - Behavioral</ClosedNode>
          <ClosedNode>/tb_idea_single - behavior |home|superus|vhdl_system_design|workspace|idea_rcs1|idea_rcs1|tb_idea_single.vhd/uut - idea_single - Behavioral/trafo_1 - trafo - Behavioral</ClosedNode>
          <ClosedNode>/tb_keygen - behavior |home|superus|vhdl_system_design|workspace|idea_rcs1|idea_rcs1|tb_keygen.vhd</ClosedNode>
@@ -115,7 +116,6 @@
          <ClosedNode>/tb_mulop - behavior |home|superus|vhdl_system_design|workspace|Exercise1|direct_implementation|tb_mulop.vhd</ClosedNode>
          <ClosedNode>/tb_reg_sync - behavior |home|superus|Vhdl_System_Design_WiSe1516|workspace|idea_rcs1|idea_rcs1|tb_reg_sync.vhd</ClosedNode>
          <ClosedNode>/tb_reg_sync - behavior |home|superus|vhdl_system_design|workspace|idea_rcs1|idea_rcs1|tb_reg_sync.vhd</ClosedNode>
-         <ClosedNode>/tb_register_16bit - behavior |home|superus|vhdl_system_design|workspace|idea_rcs1|idea_rcs1|tb_register_16bit.vhd</ClosedNode>
          <ClosedNode>/tb_round - behavior |home|superus|Vhdl_System_Design_WiSe1516|workspace|Exercise1|direct_implementation|tb_round.vhd</ClosedNode>
          <ClosedNode>/tb_round - behavior |home|superus|vhdl_system_design|workspace|Exercise1|direct_implementation|tb_round.vhd</ClosedNode>
          <ClosedNode>/tb_trafo - behavior |home|superus|Vhdl_System_Design_WiSe1516|workspace|Exercise1|direct_implementation|tb_trafo.vhd</ClosedNode>
@@ -124,13 +124,13 @@
          <ClosedNode>/tb_xorop - behavior |home|superus|vhdl_system_design|workspace|Exercise1|direct_implementation|tb_xorop.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>tb_idea_com - behavior (/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/tb_idea_com.vhd)</SelectedItem>
+         <SelectedItem>tb_idea_single - behavior (/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/tb_idea_single.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >3</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >5</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001ee000000020000000000000000000000000200000064ffffffff000000810000000300000002000001ee0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000190000000020000000000000000000000000200000064ffffffff000000810000000300000002000001900000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>tb_idea_com - behavior (/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/tb_idea_com.vhd)</CurrentItem>
+      <CurrentItem>tb_idea_single - behavior (/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/tb_idea_single.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -139,26 +139,26 @@
          <ClosedNode>ISim Simulator</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f1000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f10000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f1000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f10000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f4000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f40000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
       <ClosedNodes>
@@ -166,12 +166,12 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f1000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f10000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
 </Project>
