@@ -34,7 +34,7 @@ entity multiplexer_4_to_1 is
            in2 : IN  std_logic_vector(15 downto 0);
            in3 : IN  std_logic_vector(15 downto 0);
            in4 : IN  std_logic_vector(15 downto 0);
-           s 	: in  STD_LOGIC_VECTOR(1 downto 0);
+           S 	: in  STD_LOGIC_VECTOR(1 downto 0);
            O	: out  std_logic_vector(15 downto 0));
 end multiplexer_4_to_1;
 
@@ -42,9 +42,9 @@ architecture Behavioral of multiplexer_4_to_1 is
 
 begin
 
-process (in1, in2, in3, in4, s)
+process (in1, in2, in3, in4, S)
 begin
-	case s is
+	case S is
 		when "00"	=>	O <= in1;
 		when "01"	=> O <= in2;
 		when "10"	=> O <= in3;
