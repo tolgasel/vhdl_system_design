@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   20:01:50 12/23/2015
+-- Create Date:   20:55:53 12/23/2015
 -- Design Name:   
 -- Module Name:   /home/superus/vhdl_system_design/workspace/idea_rcs2/tb_module.vhd
 -- Project Name:  idea_rcs2
@@ -46,7 +46,7 @@ ARCHITECTURE behavior OF tb_module IS
          EN125 : OUT  std_logic;
          EN346 : OUT  std_logic;
          EN78 : OUT  std_logic;
-         S : OUT  std_logic;
+         S : OUT  std_logic_vector(1 downto 0);
          Result : OUT  std_logic
         );
     END COMPONENT;
@@ -60,7 +60,7 @@ ARCHITECTURE behavior OF tb_module IS
    signal EN125 : std_logic;
    signal EN346 : std_logic;
    signal EN78 : std_logic;
-   signal S : std_logic;
+   signal S : std_logic_vector(1 downto 0);
    signal Result : std_logic;
 
    -- Clock period definitions
@@ -88,18 +88,7 @@ BEGIN
 		wait for Clock_period/2;
    end process;
  
-
-   -- Stimulus process
-   stim_proc: process
-   begin		
-      -- hold reset state for 100 ns.
-      wait for 100 ns;	
-
-      wait for Clock_period*10;
-
-      -- insert stimulus here 
-
-      wait;
-   end process;
+ 
+Initial <= '0', '1' after 40 ns, '0' after 70 ns, '1' after 170 ns, '0' after 200 ns;
 
 END;

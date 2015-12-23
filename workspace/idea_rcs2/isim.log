@@ -1,5 +1,5 @@
 ISim log file
-Running: /home/superus/vhdl_system_design/workspace/idea_rcs2/tb_multiplexer_4_to_1_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/superus/vhdl_system_design/workspace/idea_rcs2/tb_multiplexer_4_to_1_isim_beh.wdb 
+Running: /home/superus/vhdl_system_design/workspace/idea_rcs2/tb_module_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/superus/vhdl_system_design/workspace/idea_rcs2/tb_module_isim_beh.wdb 
 ISim P.20131013 (signature 0xfbc00daa)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -15,6 +15,7 @@ Finished circuit initialization process.
 # run all
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+Stopped at time : 4741265 ns : File "/home/superus/vhdl_system_design/workspace/idea_rcs2/tb_module.vhd" Line 87
 ISim P.20131013 (signature 0xfbc00daa)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -23,9 +24,9 @@ This is a Lite version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run 50ns
+# run 300ns
 # restart
-# run 50ns
+# run 300ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # exit 0

@@ -35,7 +35,7 @@ entity module is
            EN125		: out  std_logic;
            EN346		: out  std_logic;
 			  EN78		: out  std_logic;
-           S			: out  std_logic;
+           S			: out  std_logic_vector(1 downto 0);
            Result		: out  std_logic);
 end module;
 
@@ -100,17 +100,20 @@ begin
 end process register_enable_proc;
 							
 
-internal_state_proc : process (int_state_sig)	
-
+int_state_proc : process (int_state_sig)	
 begin
 	case int_state_sig is
-		when "000" | "001"	=>	S <= "00";
-		when "010" | "011"	=> S <= "01";
-		when "100" | "101"	=>	S <= "10";
-		when "110" | "111"	=> S <= "11";
-		when others 			=> S <= "00";
+		when "000"	=>	S <= "00";
+		when "001"	=>	S <= "00";
+		when "010" 	=> S <= "01";
+		when "011"	=> S <= "01";
+		when "100" 	=>	S <= "10";
+		when "101"	=>	S <= "10";
+		when "110" 	=> S <= "11";
+		when "111"	=> S <= "11";
+		when others	=> S <= "00";
 	end case;
-end process internal_state_proc;				
+end process int_state_proc;				
 							
 end Behavioral;
 

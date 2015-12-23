@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/home/superus/vhdl_system_design/workspace/idea_rcs2/tb_multiplexer_4_to_1_isim_beh.exe" -prj "/home/superus/vhdl_system_design/workspace/idea_rcs2/tb_multiplexer_4_to_1_beh.prj" "work.tb_multiplexer_4_to_1" 
+-intstyle "ise" -incremental -o "/home/superus/vhdl_system_design/workspace/idea_rcs2/tb_module_isim_beh.exe" -prj "/home/superus/vhdl_system_design/workspace/idea_rcs2/tb_module_beh.prj" "work.tb_module" 
