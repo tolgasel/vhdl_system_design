@@ -53,6 +53,14 @@ end datapath;
 
 architecture Behavioral of datapath is
 
+    COMPONENT register_16bit
+    PORT(
+         D : IN  std_logic_vector(15 downto 0);
+         Q : OUT  std_logic_vector(15 downto 0);
+         en : IN  std_logic;
+         clk : IN  std_logic
+        );
+    END COMPONENT;
  
     COMPONENT multiplexer_4_to_1
     PORT(
@@ -91,38 +99,110 @@ architecture Behavioral of datapath is
         );
     END COMPONENT;	 
 	 
+SIGNAL MUL1_OUT : std_logic_vector(15 downto 0);
+SIGNAL ADD1_OUT : std_logic_vector(15 downto 0);
+SIGNAL XOR1_OUT : std_logic_vector(15 downto 0);
+SIGNAL R1_OUT : std_logic_vector(15 downto 0);
+SIGNAL R2_OUT : std_logic_vector(15 downto 0);
+SIGNAL R3_OUT : std_logic_vector(15 downto 0);
+SIGNAL R4_OUT : std_logic_vector(15 downto 0);
+SIGNAL R5_OUT : std_logic_vector(15 downto 0);
+SIGNAL R6_OUT : std_logic_vector(15 downto 0);
+SIGNAL R7_OUT : std_logic_vector(15 downto 0);
+SIGNAL R8_OUT : std_logic_vector(15 downto 0);
+SIGNAL MUX1_OUT : std_logic_vector(15 downto 0);
+SIGNAL MUX2_OUT : std_logic_vector(15 downto 0);
+SIGNAL MUX3_OUT : std_logic_vector(15 downto 0);
+SIGNAL MUX4_OUT : std_logic_vector(15 downto 0);
 
 begin
+
+   REG_1: register_16bit PORT MAP (
+          D => MUL1_OUT,
+          Q => R1_OUT,
+          en => EN125,
+          clk => Clock
+        );
+
+   REG_2: register_16bit PORT MAP (
+          D => ADD1_OUT,
+          Q => R2_OUT,
+          en => EN125,
+          clk => Clock
+        );
+
+   REG_3: register_16bit PORT MAP (
+          D => ADD1_OUT,
+          Q => R3_OUT,
+          en => EN346,
+          clk => Clock
+        );
+
+   REG_4: register_16bit PORT MAP (
+          D => MUL1_OUT,
+          Q => R4_OUT,
+          en => EN346,
+          clk => Clock
+        );
+
+   REG_5: register_16bit PORT MAP (
+          D => XOR1_OUT,
+          Q => R5_OUT,
+          en => EN125,
+          clk => Clock
+        );
+
+   REG_6: register_16bit PORT MAP (
+          D => XOR1_OUT,
+          Q => R6_OUT,
+          en => EN346,
+          clk => Clock
+        );
+
+   REG_7: register_16bit PORT MAP (
+          D => MUL1_OUT,
+          Q => R7_OUT,
+          en => EN78,
+          clk => Clock
+        );
+
+   REG_8: register_16bit PORT MAP (
+          D => ADD1_OUT,
+          Q => R8_OUT,
+          en => EN78,
+          clk => Clock
+        );
+
 
    XOR_1: xorop PORT MAP (
           A => MUL1_OUT,
           B => ADD1_OUT,
-          O => R5_IN
+          O => XOR1_OUT
         );
 
    XOR_2: xorop PORT MAP (
-          A => A,
-          B => B,
-          O => O
+          A => R3_OUT,
+          B => ADD1_OUT,
+          O => Y3
         );
 
    XOR_3: xorop PORT MAP (
-          A => A,
-          B => B,
-          O => O
+          A => R2_OUT,
+          B => MUL1_OUT,
+          O => Y2
         );
 		  
    XOR_4: xorop PORT MAP (
-          A => A,
-          B => B,
-          O => O
+          A => R4_OUT,
+          B => ADD1_OUT,
+          O => Y4
         );
 
 
    XOR_5: xorop PORT MAP (
-          A => A,
-          B => B,
-          O => O
+          A => R1_OUT,
+          B => MUL1_OUT,
+          O => Y1
         );		  
 		  
 		  
@@ -169,8 +249,8 @@ begin
    MUX4_4_to_1: multiplexer_4_to_1 PORT MAP (
           in1 => Z3,
           in2 => Z2,
-          in3 => MUL_OUT,
-          in4 => MUL_OUT,
+          in3 => MUL1_OUT,
+          in4 => MUL1_OUT,
           S => S,
           O => MUX4_OUT
         );
