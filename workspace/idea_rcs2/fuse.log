@@ -1,22 +1,37 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -o "/home/superus/vhdl_system_design/workspace/idea_rcs2/tb_module_isim_beh.exe" -prj "/home/superus/vhdl_system_design/workspace/idea_rcs2/tb_module_beh.prj" "work.tb_module" 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -o "/home/superus/vhdl_system_design/workspace/idea_rcs2/tb_clockedround_isim_beh.exe" -prj "/home/superus/vhdl_system_design/workspace/idea_rcs2/tb_clockedround_beh.prj" "work.tb_clockedround" 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 2
 Turning on mult-threading, number of parallel sub-compilation jobs: 4 
 Determining compilation order of HDL files
-Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/module.vhd" into library work
-Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/tb_module.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/xorop.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/register.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/multiplexer_4_to_1.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/mulop.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/addop.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/datapath.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/control.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/clockedround.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/tb_clockedround.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 95028 KB
-Fuse CPU Usage: 2830 ms
+Fuse Memory Usage: 97020 KB
+Fuse CPU Usage: 2850 ms
 Compiling package standard
 Compiling package std_logic_1164
-Compiling architecture behavioral of entity module [module_default]
-Compiling architecture behavior of entity tb_module
+Compiling package numeric_std
+Compiling architecture behavioral of entity control [control_default]
+Compiling architecture behavioral of entity register_16bit [register_16bit_default]
+Compiling architecture behavioral of entity xorop [xorop_default]
+Compiling architecture behavioral of entity addop [addop_default]
+Compiling architecture behavioral of entity mulop [mulop_default]
+Compiling architecture behavioral of entity multiplexer_4_to_1 [multiplexer_4_to_1_default]
+Compiling architecture behavioral of entity datapath [datapath_default]
+Compiling architecture behavioral of entity clockedround [clockedround_default]
+Compiling architecture behavior of entity tb_clockedround
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 5 VHDL Units
-Built simulation executable /home/superus/vhdl_system_design/workspace/idea_rcs2/tb_module_isim_beh.exe
-Fuse Memory Usage: 398632 KB
-Fuse CPU Usage: 2890 ms
-GCC CPU Usage: 420 ms
+Compiled 20 VHDL Units
+Built simulation executable /home/superus/vhdl_system_design/workspace/idea_rcs2/tb_clockedround_isim_beh.exe
+Fuse Memory Usage: 406716 KB
+Fuse CPU Usage: 3060 ms
+GCC CPU Usage: 340 ms

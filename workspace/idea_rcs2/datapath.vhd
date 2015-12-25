@@ -32,6 +32,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity datapath is
     Port ( Clock : in  STD_LOGIC;
            S : IN  std_logic_vector(1 downto 0);
+           S_t : IN  std_logic_vector(1 downto 0);
            EN125 : in  STD_LOGIC;
            EN346 : in  STD_LOGIC;
            EN78 : in  STD_LOGIC;
@@ -45,6 +46,10 @@ entity datapath is
            Z4 : IN  std_logic_vector(15 downto 0);
            Z5 : IN  std_logic_vector(15 downto 0);
            Z6 : IN  std_logic_vector(15 downto 0);
+     Y1_trafo : OUT std_logic_vector(15 downto 0);
+     Y2_trafo : OUT std_logic_vector(15 downto 0);
+     Y3_trafo : OUT std_logic_vector(15 downto 0);
+	  Y4_trafo : OUT std_logic_vector(15 downto 0);
            Y1 : OUT std_logic_vector(15 downto 0);
            Y2 : OUT std_logic_vector(15 downto 0);
            Y3 : OUT std_logic_vector(15 downto 0);
@@ -116,6 +121,11 @@ SIGNAL MUX3_OUT : std_logic_vector(15 downto 0);
 SIGNAL MUX4_OUT : std_logic_vector(15 downto 0);
 
 begin
+
+  Y3_trafo <= R3_OUT;
+  Y2_trafo <= R2_OUT;
+  Y4_trafo <= R4_OUT;
+  Y1_trafo <= R1_OUT;
 
    REG_1: register_16bit PORT MAP (
           D => MUL1_OUT,
@@ -251,7 +261,7 @@ begin
           in2 => Z2,
           in3 => MUL1_OUT,
           in4 => MUL1_OUT,
-          S => S,
+          S => S_t,
           O => MUX4_OUT
         );
 
