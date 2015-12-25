@@ -47,6 +47,16 @@ begin
 begin
 
 
+Trafo <= Round(4);
+
+trafo_proc : process(Round)
+begin
+	if Round = "0000" then S_i <= '1';
+	else S_i <= '0';
+	end if;
+end process trafo_proc;
+
+
 State_Memory : process (Clock)
 begin
 	if Clock = '1' and Clock'EVENT then
@@ -59,7 +69,11 @@ NextStateLogic: process(Clock, State)
 begin
 	if Clock = '1' and Clock'EVENT then
 		case State is
-			when Sleep => If Start = '1' then Next_State <= Setup;
+			when Sleep => If Start = '1' then 	
+										Next_State <= Setup;
+										Round <= "0000";
+								else 
+										Round <= "1000";
 								end if;
 			when Setup => Next_State <= Calc;
 			when Calc	=>	If Result = '0' then Next_State <= Calc;
@@ -68,6 +82,7 @@ begin
 											Next_State <= Sleep;
 										else 	if Result = '1' and Round /= "1000" then
 												Next_State <= Setup;
+												Round <= Round + 1;
 												end if;
 										end if;
 								end if;
@@ -88,6 +103,8 @@ begin
 		end case;
 	end if;
 end process OutputLogic;
+
+
 
 end Behavioral;
 
