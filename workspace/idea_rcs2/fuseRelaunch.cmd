@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/home/superus/vhdl_system_design/workspace/idea_rcs2/tb_clockedround_isim_beh.exe" -prj "/home/superus/vhdl_system_design/workspace/idea_rcs2/tb_clockedround_beh.prj" "work.tb_clockedround" 
+-intstyle "ise" -incremental -o "/home/superus/vhdl_system_design/workspace/idea_rcs2/tb_idea_rcs2_isim_beh.exe" -prj "/home/superus/vhdl_system_design/workspace/idea_rcs2/tb_idea_rcs2_beh.prj" "work.tb_idea_rcs2" 
