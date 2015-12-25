@@ -66,7 +66,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000128000000010001000100000000000000000000000064ffffffff000000810000000000000001000001280000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000000f4000000010001000100000000000000000000000064ffffffff000000810000000000000001000000f40000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>work</CurrentItem>
    </ItemView>
@@ -95,9 +95,10 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/clockedround - Behavioral |home|superus|vhdl_system_design|workspace|idea_rcs2|clockedround.vhd</ClosedNode>
          <ClosedNode>/clockedround - Behavioral |home|superus|vhdl_system_design|workspace|idea_rcs2|clockedround.vhd/datapath_module - datapath - Behavioral</ClosedNode>
-         <ClosedNode>/tb_addop - behavior |home|superus|vhdl_system_design|workspace|idea_rcs2|tb_addop.vhd</ClosedNode>
+         <ClosedNode>/tb_clockedround - behavior |home|superus|vhdl_system_design|workspace|idea_rcs2|tb_clockedround.vhd</ClosedNode>
          <ClosedNode>/tb_clockedround - behavior |home|superus|vhdl_system_design|workspace|idea_rcs2|tb_clockedround.vhd/uut - clockedround - Behavioral/datapath_module - datapath - Behavioral</ClosedNode>
          <ClosedNode>/tb_control - behavior |home|superus|vhdl_system_design|workspace|idea_rcs2|tb_control.vhd</ClosedNode>
+         <ClosedNode>/tb_datapath - behavior |home|superus|vhdl_system_design|workspace|idea_rcs2|tb_datapath.vhd</ClosedNode>
          <ClosedNode>/tb_datapath - behavior |home|superus|vhdl_system_design|workspace|idea_rcs2|tb_datapath.vhd/uut - datapath - Behavioral</ClosedNode>
          <ClosedNode>/tb_idea - behavior |home|superus|vhdl_system_design|workspace|idea_rcs2|tb_idea.vhd</ClosedNode>
          <ClosedNode>/tb_idea_com - behavior |home|superus|vhdl_system_design|workspace|idea_rcs2|tb_idea_com.vhd</ClosedNode>
@@ -115,13 +116,13 @@
          <ClosedNode>/testbench - behavior |home|superus|vhdl_system_design|workspace|idea_rcs2|tb_clockedround.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>datapath_module - datapath - Behavioral (/home/superus/vhdl_system_design/workspace/idea_rcs2/datapath.vhd)</SelectedItem>
+         <SelectedItem>uut - addop - Behavioral (/home/superus/vhdl_system_design/workspace/idea_rcs2/addop.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001dc000000020000000000000000000000000200000064ffffffff000000810000000300000002000001dc0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001d6000000020000000000000000000000000200000064ffffffff000000810000000300000002000001d60000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>datapath_module - datapath - Behavioral (/home/superus/vhdl_system_design/workspace/idea_rcs2/datapath.vhd)</CurrentItem>
+      <CurrentItem>uut - addop - Behavioral (/home/superus/vhdl_system_design/workspace/idea_rcs2/addop.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -146,7 +147,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f4000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f40000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000064000000010000000100000000000000000000000064ffffffff000000810000000000000001000000640000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
