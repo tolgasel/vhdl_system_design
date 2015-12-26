@@ -79,7 +79,7 @@ begin
 										Round_Sig <= "1000";
 								end if;
 			when Setup => Next_State <= Calc;
-			when Calc	=>	If Result = '0' then Next_State <= Calc;
+			when Calc	=>	If Result = '0' then --Next_State <= Calc;
 								else 
 										if Result = '1' and Round_Sig = "1000" then
 											Next_State <= Sleep;

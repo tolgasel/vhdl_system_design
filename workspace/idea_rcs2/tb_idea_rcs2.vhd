@@ -103,12 +103,12 @@ BEGIN
 		wait for Clock_period/2;
    end process;
  
-X1 <= std_logic_vector(to_unsigned(0,16));
+X1 <= std_logic_vector(to_unsigned(0,16)), std_logic_vector(to_unsigned(2,16)) after 1000 ns;
 X2 <= std_logic_vector(to_unsigned(1,16));
 X3 <= std_logic_vector(to_unsigned(2,16));
 X4 <= std_logic_vector(to_unsigned(3,16));
 KEY <= "00000000000000010000000000000010000000000000001100000000000001000000000000000101000000000000011000000000000001110000000000001000";
-START <= '0', '1' after 20 ns, '0' after 50 ns;
+START <= '0', '1' after 20 ns, '0' after 50 ns, '1' after 1000 ns, '0' after 1100 ns;
 
 
 END;
