@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/superus/vhdl_system_design/workspace/idea_rcs2plus/idea_com.ncd
+OUTFILE=/home/superus/vhdl_system_design/workspace/idea_rcs2plus/idea_com.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=/home/superus/vhdl_system_design/workspace/idea_rcs2plus
+LICENSE=WebPack
+USER_INFO=211039636_0_0_476
