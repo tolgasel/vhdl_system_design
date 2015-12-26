@@ -1,8 +1,0 @@
-work	"addop.vhd"
-work	"clockedround.vhd"
-work	"control.vhd"
-work	"datapath.vhd"
-work	"mulop.vhd"
-work	"multiplexer_4_to_1.vhd"
-work	"register.vhd"
-work	"xorop.vhd"

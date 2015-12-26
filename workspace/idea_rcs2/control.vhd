@@ -86,7 +86,7 @@ begin
 end process proc_counter;
 
 
-register_enable_proc : process (int_state_sig)
+register_enable_proc : process (int_state_sig, trafo)
 
 begin
 		if trafo = '0' then
@@ -142,7 +142,7 @@ begin
 end process register_enable_proc;
 							
 
-int_state_proc : process (int_state_sig)	
+int_state_proc : process (int_state_sig, trafo)	
 begin
 		if trafo = '0' then
 			case int_state_sig is
@@ -170,7 +170,7 @@ begin
 end process int_state_proc;				
 							
 							
-signal_S_t_proc : process (S_sig)
+signal_S_t_proc : process (S_sig, trafo)
 begin
 	if trafo = '0' then
 		S_t(1) <= S_sig(1);
