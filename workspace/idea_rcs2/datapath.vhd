@@ -104,6 +104,7 @@ architecture Behavioral of datapath is
         );
     END COMPONENT;	 
 	 
+
 SIGNAL MUL1_OUT : std_logic_vector(15 downto 0);
 SIGNAL ADD1_OUT : std_logic_vector(15 downto 0);
 SIGNAL XOR1_OUT : std_logic_vector(15 downto 0);

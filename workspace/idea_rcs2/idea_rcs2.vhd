@@ -95,6 +95,9 @@ architecture Behavioral of idea_rcs2 is
     COMPONENT clockedround
     PORT(
          Clock : IN  std_logic;
+			Init : IN Std_Logic;
+			Result : OUT Std_Logic;
+			Trafo : IN Std_Logic;
          X1 : IN  std_logic_vector(15 downto 0);
          X2 : IN  std_logic_vector(15 downto 0);
          X3 : IN  std_logic_vector(15 downto 0);
@@ -236,6 +239,9 @@ ROUND_COUNTER: roundcounter PORT MAP (
 
 extended_round_module: clockedround PORT MAP (
           Clock => Clock,
+			 Init => Init,
+			 Result => Result,
+			 Trafo => Trafo,
           X1 => MUX1_OUT,
           X2 => MUX2_OUT,
           X3 => MUX3_OUT,
@@ -247,9 +253,9 @@ extended_round_module: clockedround PORT MAP (
           Z5 => Z5_OUT,
           Z6 => Z6_OUT,
           Y1 => Y1_OUT,
-          Y2 => Y1_OUT,
-          Y3 => Y1_OUT,
-          Y4 => Y1_OUT,
+          Y2 => Y2_OUT,
+          Y3 => Y3_OUT,
+          Y4 => Y4_OUT,
           Y1_trafo =>  Y1,
           Y2_trafo =>  Y2,
           Y3_trafo =>  Y3,

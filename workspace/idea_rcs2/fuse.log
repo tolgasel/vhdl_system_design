@@ -1,0 +1,47 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/superus/vhdl_system_design/workspace/idea_rcs2/tb_idea_rcs2_isim_beh.exe -prj /home/superus/vhdl_system_design/workspace/idea_rcs2/tb_idea_rcs2_beh.prj work.tb_idea_rcs2 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/xorop.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/register.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/multiplexer_4_to_1.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/mulop.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/addop.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/datapath.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/control.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/roundcounter.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/multiplexer.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/keygen.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/clockedround.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/idea_rcs2.vhd" into library work
+Parsing VHDL file "/home/superus/vhdl_system_design/workspace/idea_rcs2/tb_idea_rcs2.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 98684 KB
+Fuse CPU Usage: 2970 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity register_16bit [register_16bit_default]
+Compiling architecture behavioral of entity multiplexer [multiplexer_default]
+Compiling architecture behavioral of entity roundcounter [roundcounter_default]
+Compiling architecture behavioral of entity keygen [keygen_default]
+Compiling architecture behavioral of entity control [control_default]
+Compiling architecture behavioral of entity xorop [xorop_default]
+Compiling architecture behavioral of entity addop [addop_default]
+Compiling architecture behavioral of entity mulop [mulop_default]
+Compiling architecture behavioral of entity multiplexer_4_to_1 [multiplexer_4_to_1_default]
+Compiling architecture behavioral of entity datapath [datapath_default]
+Compiling architecture behavioral of entity clockedround [clockedround_default]
+Compiling architecture behavioral of entity idea_rcs2 [idea_rcs2_default]
+Compiling architecture behavior of entity tb_idea_rcs2
+Time Resolution for simulation is 1ps.
+Waiting for 12 sub-compilation(s) to finish...
+Compiled 30 VHDL Units
+Built simulation executable /home/superus/vhdl_system_design/workspace/idea_rcs2/tb_idea_rcs2_isim_beh.exe
+Fuse Memory Usage: 412684 KB
+Fuse CPU Usage: 3340 ms
+GCC CPU Usage: 4740 ms

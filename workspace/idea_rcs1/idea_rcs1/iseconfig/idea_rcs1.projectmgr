@@ -22,13 +22,13 @@
          <ClosedNode>/tb_xorop - behavior |home|superus|vhdl_system_design|workspace|Exercise1|direct_implementation|tb_xorop.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>idea_com - Behavioral (/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/idea_com.vhd)</SelectedItem>
+         <SelectedItem>idea_1 - idea_com_inner - Behavioral (/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/idea_com_inner.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001da000000020000000000000000000000000200000064ffffffff000000810000000300000002000001da0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>idea_com - Behavioral (/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/idea_com.vhd)</CurrentItem>
+      <CurrentItem>idea_1 - idea_com_inner - Behavioral (/home/superus/vhdl_system_design/workspace/idea_rcs1/idea_rcs1/idea_com_inner.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -64,7 +64,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000119000000010001000100000000000000000000000064ffffffff000000810000000000000001000001190000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000000e3000000010001000100000000000000000000000064ffffffff000000810000000000000001000000e30000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>work</CurrentItem>
    </ItemView>
@@ -79,13 +79,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Generate Programming File</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e5000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e50000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f2000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f20000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Generate Programming File</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
@@ -174,4 +174,5 @@
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem/>
    </ItemView>
+   <CopyAdditionalFiles/>
 </Project>

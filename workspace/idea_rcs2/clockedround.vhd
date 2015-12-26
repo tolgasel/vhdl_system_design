@@ -31,6 +31,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity clockedround is
     Port ( Clock : in Std_logic;
+				Init : in Std_Logic;
+				Result : out Std_Logic;
+				Trafo : in Std_Logic;
 			  X1 : IN  std_logic_vector(15 downto 0);
            X2 : IN  std_logic_vector(15 downto 0);
            X3 : IN  std_logic_vector(15 downto 0);
@@ -53,14 +56,11 @@ end clockedround;
 
 architecture Behavioral of clockedround is
 
-signal Initial	:	std_logic;
-signal trafo	:	std_logic;
 signal EN125	:	std_logic;
 signal EN346	:	std_logic;
 signal EN78		:	std_logic;
 signal S_sig	:	std_logic_vector(1 downto 0);
 signal S_t_sig :	std_logic_vector(1 downto 0);
-signal Result	:	std_logic;
 
 
 
@@ -112,8 +112,8 @@ begin
 
    control_module: control PORT MAP (
           Clock => Clock,
-          Initial => Initial,
-          trafo => trafo,
+          Initial => Init,
+          trafo => Trafo,
           EN125 => EN125,
           EN346 => EN346,
           EN78 => EN78,
@@ -149,12 +149,7 @@ begin
           Y4 => Y4
         );
 
--- JUST FOR TESTING PURPOSES+
 
-Initial <= '0', '1' after 20 ns, '0' after 80 ns;
-trafo <= '1';
-
-------------------------
 
 
 end Behavioral;
