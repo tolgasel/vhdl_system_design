@@ -217,7 +217,7 @@ begin
         );		  
 		  
 		  
-   ADD1: addop PORT MAP (
+   ADDER1: addop PORT MAP (
           A => MUX3_OUT,
           B => MUX4_OUT,
           O => ADD1_OUT

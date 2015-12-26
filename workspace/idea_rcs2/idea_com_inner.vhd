@@ -56,27 +56,28 @@ component uart
           overrun 	: out STD_LOGIC );
 end component;
 
---component idea_hw 
---    Port ( CLK : in STD_LOGIC;
---			  START : in  STD_LOGIC;
---           READY : out  STD_LOGIC;			  
---           KEY : in  STD_LOGIC_VECTOR (127 downto 0);
---           X1 : in  STD_LOGIC_VECTOR (15 downto 0);
---           X2 : in  STD_LOGIC_VECTOR (15 downto 0);
---           X3 : in  STD_LOGIC_VECTOR (15 downto 0);
---           X4 : in  STD_LOGIC_VECTOR (15 downto 0);
---           Y1 : out  STD_LOGIC_VECTOR (15 downto 0);
---           Y2 : out  STD_LOGIC_VECTOR (15 downto 0);
---           Y3 : out  STD_LOGIC_VECTOR (15 downto 0);
---           Y4 : out  STD_LOGIC_VECTOR (15 downto 0));
---end component;
 
-    COMPONENT idea_single
+--    COMPONENT idea_single
+--    PORT(
+--         KEY : IN  std_logic_vector(127 downto 0);
+--         clk_in : IN  std_logic;
+--         ready_out : OUT  std_logic;
+--         start_in : IN  std_logic;
+--         X1 : IN  std_logic_vector(15 downto 0);
+--         X2 : IN  std_logic_vector(15 downto 0);
+--         X3 : IN  std_logic_vector(15 downto 0);
+--         X4 : IN  std_logic_vector(15 downto 0);
+--         Y1 : OUT  std_logic_vector(15 downto 0);
+--         Y2 : OUT  std_logic_vector(15 downto 0);
+--         Y3 : OUT  std_logic_vector(15 downto 0);
+--         Y4 : OUT  std_logic_vector(15 downto 0)
+--        );
+--    END COMPONENT;
+--	 
+
+
+    COMPONENT idea_rcs2
     PORT(
-         KEY : IN  std_logic_vector(127 downto 0);
-         clk_in : IN  std_logic;
-         ready_out : OUT  std_logic;
-         start_in : IN  std_logic;
          X1 : IN  std_logic_vector(15 downto 0);
          X2 : IN  std_logic_vector(15 downto 0);
          X3 : IN  std_logic_vector(15 downto 0);
@@ -84,9 +85,14 @@ end component;
          Y1 : OUT  std_logic_vector(15 downto 0);
          Y2 : OUT  std_logic_vector(15 downto 0);
          Y3 : OUT  std_logic_vector(15 downto 0);
-         Y4 : OUT  std_logic_vector(15 downto 0)
+         Y4 : OUT  std_logic_vector(15 downto 0);
+         Clock : IN  std_logic;
+         KEY : IN  std_logic_vector(127 downto 0);
+         Start : IN  std_logic;
+         Ready : OUT  std_logic
         );
     END COMPONENT;
+
 
     COMPONENT multiplexer
     PORT(
@@ -135,19 +141,35 @@ begin
 	-- The encryption algorithm
 --	idea1:   idea_hw port map( clk, start_idea, ready_idea, key, x1, x2, x3, x4, y1, y2, y3, y4);
 
-   uut: idea_single PORT MAP (
-          KEY => key,
-          clk_in => Clk,
-          ready_out => ready_idea,
-          start_in => start_idea,
-          X1 => x1,
-          X2 => x2,
-          X3 => x3,
-          X4 => x4,
-          Y1 => y1,
-          Y2 => y2,
-          Y3 => y3,
-          Y4 => y4
+--   uut: idea_single PORT MAP (
+--          KEY => key,
+--          clk_in => Clk,
+--          ready_out => ready_idea,
+--          start_in => start_idea,
+--          X1 => x1,
+--          X2 => x2,
+--          X3 => x3,
+--          X4 => x4,
+--          Y1 => y1,
+--          Y2 => y2,
+--          Y3 => y3,
+--          Y4 => y4
+--        );
+
+
+   uut: idea_rcs2 PORT MAP (
+          X1 => X1,
+          X2 => X2,
+          X3 => X3,
+          X4 => X4,
+          Y1 => Y1,
+          Y2 => Y2,
+          Y3 => Y3,
+          Y4 => Y4,
+          Clock => Clk,
+          KEY => key ,
+          Start => start_idea,
+          Ready => ready_idea
         );
 
 	-- mux for loopback mode
@@ -181,7 +203,7 @@ begin
 				byte_cntr <= "00000";
 				read <= '1';
 				write <= '1';
-				LEDs <= "00000000"; --LEDs <= "00000000"; hier ändern in original
+				LEDs <= "00000000"; --LEDs <= "00000000"; hier ndern in original
 			else
 				if ( state = IDLE ) then
 					-- Initial state
